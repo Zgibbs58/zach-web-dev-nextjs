@@ -8,7 +8,7 @@ import { Toggle } from "./ui/Toggle";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 
-const Header = () => {
+export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const path = usePathname();
@@ -19,7 +19,7 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = 100; // Replace 'hero' with the id of your hero section if needed
+      const heroHeight = 10; // Replace 'hero' with the id of your hero section if needed
       setIsScrolled(window.scrollY > heroHeight);
     };
 
@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <header
       className={`px-6 lg:px-24 py-3 bg-bgLightSecondary dark:bg-bgDarkSecondary flex justify-between items-center sticky top-0 z-10 ${
-        isScrolled ? "shadow-md" : ""
+        isScrolled ? "shadow-[0_10px_5px_-3px_rgba(0,0,0,0.2)] opacity-95" : ""
       }`}
     >
       <Link href={"/"} className="lg:hidden flex items-center w-16">
@@ -107,14 +107,6 @@ const Header = () => {
             transition={{ duration: 0.3 }}
             className="fixed top-0 left-0 bg-bgLightSecondary dark:bg-bgDarkSecondary w-full h-full flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
           >
-            {/* <div>
-              <Image
-                alt="Solid Rock Concrete Logo"
-                height={200}
-                src="/images/SRBannerLight.png"
-                width={220}
-              />
-            </div> */}
             <ul className="text-left flex flex-col text-xl w-full font-600 gap-4 items-start">
               <li onClick={toggleMenu}>
                 <Link href="/">Home</Link>
@@ -137,6 +129,4 @@ const Header = () => {
       </AnimatePresence>
     </header>
   );
-};
-
-export default Header;
+}
