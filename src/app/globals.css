@@ -9,15 +9,22 @@
   --primary-green: 16 185 129;
 }
 
+.logoColor {
+  fill: #f5f8fa;
+}
+
+body {
+  color: rgb(var(--foreground));
+  background: rgb(var(--background-primary));
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground: 255, 255, 255;
     --background-primary: 30, 30, 30;
     --background-secondary: 45, 45, 48;
   }
-}
-
-body {
-  color: rgb(var(--foreground));
-  background: rgb(var(--background-primary));
+  .logoColor {
+    fill: #1e293b;
+  }
 }

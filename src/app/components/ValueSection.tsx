@@ -47,8 +47,8 @@ export default function ValueSection() {
               <motion.div
                 initial={{ height: 0, opacity: 0 }}
                 animate={{ height: clicked[index] ? "auto" : 0, opacity: clicked[index] ? 1 : 0 }}
-                transition={{ duration: 0.3 }}
-                className={`mt-2 overflow-hidden ${clicked[index] ? "block" : "hidden"}`}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className={`mt-2 overflow-hidden`}
               >
                 <p>{descriptions[index]}</p>
               </motion.div>
