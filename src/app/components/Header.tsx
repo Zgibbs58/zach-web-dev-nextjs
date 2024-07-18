@@ -19,7 +19,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const heroHeight = 10; // Replace 'hero' with the id of your hero section if needed
+      const heroHeight = 200; // Replace 'hero' with the id of your hero section if needed
       setIsScrolled(window.scrollY > heroHeight);
     };
 
@@ -31,8 +31,8 @@ export default function Header() {
 
   return (
     <header
-      className={`px-6 lg:px-24 py-3 bg-bgLightPrimary dark:bg-bgDarkSecondary/80 dark:backdrop-blur-sm flex justify-between items-center sticky top-0 z-10 ${
-        isScrolled ? "shadow-[0_10px_12px_-3px_rgba(0,0,0,0.15)]" : ""
+      className={`px-6 lg:px-24 py-3 lg:py-1 bg-bgLightPrimary dark:bg-bgDarkSecondary flex justify-between items-center sticky top-0 z-10 transition-all ease-in-out duration-300 ${
+        isScrolled ? "bg-bgLightPrimary/90 dark:bg-bgDarkSecondary/90 shadow-[0_6px_10px_-3px_rgba(0,0,0,0.15)]" : ""
       }`}
     >
       <Link href={"/"} className="lg:hidden flex items-center w-16">
@@ -44,7 +44,7 @@ export default function Header() {
           </g>
         </svg>
       </Link>
-      <Link href={"/"} className="lg:flex hidden items-center space-x-4 lg:w-52 xl:w-64">
+      <Link href={"/"} className="lg:flex hidden items-center space-x-4 w-52">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           version="1.1"
@@ -121,7 +121,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 bg-bgLightSecondary dark:bg-bgDarkSecondary w-full h-full flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
+            className="fixed top-0 left-0 bg-bgLightSecondary dark:bg-bgDarkSecondary w-screen h-screen flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
           >
             <ul className="text-left flex flex-col text-xl w-full font-600 gap-4 items-start">
               <li onClick={toggleMenu}>

@@ -15,7 +15,7 @@ export default function Problem({ svg, text, delayVal, viewBoxVal }: { svg: JSX.
       >
         {svg}
       </motion.svg>
-      <p className="text-lg">{text}</p>
+      <p className="">{text}</p>
     </div>
   );
 }
