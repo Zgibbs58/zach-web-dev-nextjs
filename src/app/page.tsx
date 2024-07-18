@@ -4,6 +4,8 @@ import ValueSection from "./components/ValueSection";
 import ProblemSection from "./components/ProblemSection";
 import WhySection from "./components/WhySection";
 import TestimonailSection from "./components/TestimonialSection";
+import CtaSection from "./components/CtaSection";
+import StepsSection from "./components/StepsSection";
 
 export default function Home() {
   return (
@@ -41,6 +43,8 @@ export default function Home() {
             // },
           ]}
         />
+        <CtaSection />
+        <StepsSection />
       </section>
     </main>
   );
