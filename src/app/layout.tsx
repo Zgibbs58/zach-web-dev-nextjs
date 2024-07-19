@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "next/head";
 import { Titillium_Web } from "next/font/google";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const titilliumWeb = Titillium_Web({ subsets: ["latin"], preload: true, weight: ["200", "300", "400", "600", "700", "900"] });
 
@@ -53,6 +54,7 @@ export default function RootLayout({
       <body className={titilliumWeb.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

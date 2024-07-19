@@ -3,7 +3,7 @@ import Link from "next/link";
 
 interface ButtonProps {
   children: React.ReactNode;
-  variant: "primary" | "outline" | "outlineWhite" | "none";
+  variant: "primary" | "outline" | "mobileButton" | "none";
   link: string;
 }
 
@@ -19,8 +19,9 @@ const Button: React.FC<ButtonProps> = ({ children, variant, link }) => {
       className =
         "text-emerald-500 border border-emerald-500 rounded-xl hover:bg-emerald-500 hover:text-white font-semibold text-xl ease-in-out duration-300 flex flex-col content-end justify-center items-center px-6 py-2";
       break;
-    case "outlineWhite":
-      className = "border border-white text-white text-lg hover:bg-white hover:text-orange-500 ease-in-out duration-200 py-2 px-4";
+    case "mobileButton":
+      className =
+        "text-white bg-emerald-500 rounded-xl hover:bg-emerald-700 font-semibold ease-in-out duration-300 flex flex-col content-end justify-center items-center px-4 py-1";
       break;
     case "none":
       className = "hidden";

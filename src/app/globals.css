@@ -139,6 +139,10 @@ body {
     fill: #1e293b;
   }
 
+  .svgIcon {
+    fill: #ffffff;
+  }
+
   .phone-frame::before,
   .phone-frame::after {
     background: #ffffff;
