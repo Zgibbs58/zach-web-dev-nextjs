@@ -12,7 +12,7 @@ export default function StepCard({ delayVal, stepNum, title, text }: { delayVal:
     >
       <div className="text-4xl font-bold text-emerald-500 mb-4">{stepNum}</div>
       <h3 className="text-2xl font-semibold mb-2">{title}</h3>
-      <p className="text-lg">{text}</p>
+      <p className="">{text}</p>
     </motion.div>
   );
 }
