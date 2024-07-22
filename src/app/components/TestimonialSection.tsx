@@ -2,7 +2,7 @@ import QuoteSvg from "../assets/QuoteSvg";
 
 const Testimonial = ({ testimonial }: { testimonial: Testimonial }) => (
   <>
-    <div className="flex flex-col gap-10 xl:w-1/2 w-full text-lg text-center items-center">
+    <div className="flex flex-col gap-10 xl:w-1/2 w-full text-center items-center">
       <QuoteSvg />
       <p className="leading-relaxed inline-block">
         {testimonial.quote}
@@ -29,7 +29,7 @@ interface TestimonialsProps {
 const TestimonialSection = ({ testimonials }: TestimonialsProps) => (
   <section className="my-48 lg:my-64 px-8 lg:px-32">
     <p className="text-3xl lg:text-5xl font-bold mb-12 md:mb-24 text-center">Success In Their Words</p>
-    <div className="flex flex-wrap justify-center xl:flex-nowrap gap-y-16 gap-x-12 3xl:gap-x-20">
+    <div className="flex flex-wrap justify-center xl:flex-nowrap gap-y-16 gap-x-12 2xl:gap-x-16">
       {testimonials.map((testimonial: Testimonial, index: number) => (
         <Testimonial key={index} testimonial={testimonial} />
       ))}

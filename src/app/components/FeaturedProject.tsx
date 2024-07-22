@@ -6,7 +6,7 @@ export default function FeaturedProject({ name, description, image }: { name: st
   return (
     <section className="grid xl:grid-cols-3 xl:justify-items-end justify-items-center items-start mb-36 xl:mb-64 my-48 lg:my-64 px-8 lg:px-32">
       <div className="xl:col-span-2 text-left">
-        <AnimatedHeader text="Recent Project" xVal={-50} />
+        <AnimatedHeader text="Recent Project" xVal={-50} tailwindClasses="text-3xl lg:text-5xl font-bold" />
         <h4 className="text-2xl xl:text-4xl font-bold my-8">{name}</h4>
         <p className="mb-8">{description}</p>
         <div className="hidden xl:block">

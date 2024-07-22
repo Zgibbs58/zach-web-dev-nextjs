@@ -4,6 +4,7 @@ import Modal from "./ui/Modal";
 import { validateEmail } from "../lib/validateEmail";
 import Logo from "../assets/FullLogo";
 import Image from "next/image";
+import AnimatedHeader from "./AnimatedHeader";
 
 export default function LeadGenerator() {
   const [email, setEmail] = useState("");
@@ -73,11 +74,11 @@ export default function LeadGenerator() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!email || !validateEmail(email)) {
-      setErrorMessage("Please enter a valid email.");
-      return;
-    } else if (!name) {
+    if (!name) {
       setErrorMessage("Please enter your name.");
+      return;
+    } else if (!email || !validateEmail(email)) {
+      setErrorMessage("Please enter a valid email.");
       return;
     }
 
@@ -117,8 +118,9 @@ export default function LeadGenerator() {
       </Modal>
       <div className="mx-8 mt-6 mb-24 sm:mx-20 lg:mx-32 flex flex-wrap xl:flex-nowrap gap-x-24">
         <div className="xl:w-1/2">
-          <h3 className="text-4xl lg:text-5xl font-bold text-left mb-6">Unlock Your Website&apos;s Potential</h3>
-          <p>
+          <AnimatedHeader text="Unlock Your Website's Potential" xVal={-50} tailwindClasses="text-3xl lg:text-5xl font-bold" />
+          {/* <h3 className="text-4xl lg:text-5xl font-bold text-left mb-6">Unlock Your Website&apos;s Potential</h3> */}
+          <p className="mt-6">
             Want to know the secrets to a thriving online presence? Enter your name and email below and get access to a free PDF: 5 Essentials for a
             Successful Business Website.
           </p>
@@ -146,7 +148,7 @@ export default function LeadGenerator() {
                     E-mail
                   </label>
                   <input
-                    className="block w-full text-black border border-gray-500 rounded py-3 px-3 leading-tight focus:bg-gray-200"
+                    className="block w-full dark:text-black border border-gray-500 rounded py-3 px-3 leading-tight focus:bg-gray-200"
                     id="email"
                     name="email"
                     placeholder="user@gmail.com"
