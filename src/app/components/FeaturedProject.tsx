@@ -18,7 +18,7 @@ export default function FeaturedProject({ name, description, image }: { name: st
       <figure className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center">
         <div className="phone-frame">
           <div className="phone-frame-inner">
-            <Image src={image} alt={name} width={1000} height={1000} />
+            <Image src={image} alt={name} width={1000} height={1000} unoptimized />
             {/* <img src={image} alt={name} /> */}
           </div>
           <div className="volume-button-top"></div>

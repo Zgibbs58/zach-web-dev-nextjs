@@ -5,7 +5,7 @@ import Button from "./ui/Button";
 export default function Hero() {
   return (
     <section
-      className="relative flex items-center justify-start bg-cover bg-center py-40 md:py-48 3xl:py-58 max-h-screen"
+      className="relative flex items-center justify-start bg-cover bg-center py-40 md:py-36 3xl:py-58 max-h-screen"
       style={{ backgroundImage: "url('/images/goodReviewsOpt2.jpg')" }}
     >
       <div className="absolute inset-0 bg-black opacity-50"></div>

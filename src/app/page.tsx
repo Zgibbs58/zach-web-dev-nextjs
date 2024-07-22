@@ -9,6 +9,7 @@ import StepsSection from "./components/StepsSection";
 import ExplanatorySection from "./components/ExplanatorySection";
 import FeaturedProject from "./components/FeaturedProject";
 import { projectData } from "./lib/projectData";
+import LeadGenerator from "./components/LeadGenerator";
 
 export default function Home() {
   return (
@@ -49,12 +50,8 @@ export default function Home() {
         <CtaSection />
         <StepsSection />
         <ExplanatorySection />
-        <FeaturedProject
-          name={projectData[0].name}
-          description={projectData[0].description}
-          image={projectData[0].image}
-          key={1}
-        />
+        <FeaturedProject name={projectData[0].name} description={projectData[0].description} image={projectData[0].image} key={1} />
+        <LeadGenerator />
       </section>
     </main>
   );
