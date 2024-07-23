@@ -126,7 +126,7 @@ export default function LeadGenerator() {
           </p>
           <div className="flex justify-start text-left mt-4">
             <form className="w-full" onSubmit={handleSubmit}>
-              <div className="flex pb-6 gap-3">
+              <div className="flex pb-4 gap-3">
                 <div className="w-full">
                   <label className="block uppercase tracking-wide text-md font-bold pb-2" htmlFor="name">
                     Name
@@ -162,7 +162,7 @@ export default function LeadGenerator() {
               </div>
               <div className="flex justify-start">
                 <button
-                  className="my-4 py-4 px-16 text-xl font-bold text-white rounded-xl bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
+                  className="mb-4 py-1 md:py-4 px-6 md:px-16 text-lg md:text-xl font-bold text-white rounded-lg bg-emerald-500 hover:bg-emerald-600 ease-in-out duration-300"
                   type="submit"
                 >
                   Submit
