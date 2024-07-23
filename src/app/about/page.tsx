@@ -5,7 +5,7 @@ import TestimonialSection from "../components/TestimonialSection";
 import AnimatedSection from "../components/AnimatedSection";
 import Image from "next/image";
 
-export default function About() {
+export default function about() {
   return (
     <>
       {/* <MetaSeoTags

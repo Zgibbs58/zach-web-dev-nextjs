@@ -79,7 +79,7 @@ export default function Header() {
         </Button>
       </div>
       <nav className="lg:hidden flex gap-4">
-        <Button variant="mobileButton" link="contact">
+        <Button variant="mobilePrimary" link="contact">
           Free Quote
         </Button>
         <Toggle toggle={() => toggleMenu()} isOpen={isOpen} />
@@ -98,13 +98,13 @@ export default function Header() {
                 <Link href="/">Home</Link>
               </li>
               <li onClick={toggleMenu}>
-                <Link href="/contact">Contact</Link>
-              </li>
-              <li onClick={toggleMenu}>
-                <Link href="/services">Services</Link>
-              </li>
-              <li onClick={toggleMenu}>
                 <Link href="/about">About</Link>
+              </li>
+              <li onClick={toggleMenu}>
+                <Link href="/portfolio">Portfolio</Link>
+              </li>
+              <li onClick={toggleMenu}>
+                <Link href="/contact">Contact</Link>
               </li>
             </ul>
             <Button variant="primary" link="contact">

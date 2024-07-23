@@ -36,20 +36,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" />
-        <link rel="preconnect" href="https://www.gstatic.com" />
-        <link rel="preconnect" href="https://www.google.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+      {/* <Head> */}
+      {/* <link rel="icon" href="/icon?<generated>" type="image/<generated>" sizes="<generated>" /> */}
+      {/* <link rel="preconnect" href="https://www.gstatic.com" /> */}
+      {/* <link rel="preconnect" href="https://www.google.com" /> */}
+      {/* <link rel="preconnect" href="https://fonts.gstatic.com" /> */}
 
-        {/* Optional: DNS Prefetch to further improve performance */}
-        <link rel="dns-prefetch" href="https://www.gstatic.com" />
-        <link rel="dns-prefetch" href="https://www.google.com" />
+      {/* Optional: DNS Prefetch to further improve performance */}
+      {/* <link rel="dns-prefetch" href="https://www.gstatic.com" /> */}
+      {/* <link rel="dns-prefetch" href="https://www.google.com" /> */}
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        {/* Optional: DNS Prefetch */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-      </Head>
+      {/* <link rel="preconnect" href="https://fonts.googleapis.com" /> */}
+      {/* Optional: DNS Prefetch */}
+      {/* <link rel="dns-prefetch" href="https://fonts.googleapis.com" /> */}
+      {/* </Head> */}
       <body className={titilliumWeb.className}>
         <Header />
         {children}
