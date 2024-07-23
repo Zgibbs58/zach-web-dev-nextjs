@@ -24,7 +24,13 @@ const Explanatory = () => {
           Get Your Free Quote
         </Button>
       </div>
-      <Image className="xl:w-1/2 object-cover" width={1000} height={1000} src="/images/happyCustomer.jpg" alt="Happy customer enjoying website" />
+      <Image
+        className="xl:w-1/2 object-cover rounded-lg"
+        width={1000}
+        height={1000}
+        src="/images/happyCustomer.jpg"
+        alt="Happy customer enjoying website"
+      />
       {/* <img className="xl:w-1/2 object-cover" src="/images/happyCustomer.jpg" alt="Happy customer enjoying website" /> */}
     </section>
   );

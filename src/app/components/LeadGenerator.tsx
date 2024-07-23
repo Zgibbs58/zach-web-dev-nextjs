@@ -173,7 +173,7 @@ export default function LeadGenerator() {
           </div>
         </div>
         <Image
-          className="xl:w-1/2 object-contain"
+          className="xl:w-1/2 object-contain rounded-lg"
           width={1000}
           height={1000}
           src="/images/5-must-have-titlepage.jpg"

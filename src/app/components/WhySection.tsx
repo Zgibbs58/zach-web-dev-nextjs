@@ -7,7 +7,13 @@ export default function WhySection() {
     <div className="flex flex-col justify-center text-left gap-16 my-48 lg:my-64 px-8 lg:px-32">
       <AnimatedHeader text="Why Choose Zach Gibbs Web Development?" xVal={-50} tailwindClasses="text-3xl lg:text-5xl font-bold" />
       <div className="flex flex-col xl:flex-row items-center justify-between gap-16">
-        <Image className="w-full xl:w-1/3" width={1000} height={1000} alt="Zach Gibbs Headshot" src={"/images/zach-headshot-compressed.jpg"}></Image>
+        <Image
+          className="w-full xl:w-1/3 rounded-lg"
+          width={1000}
+          height={1000}
+          alt="Zach Gibbs Headshot"
+          src={"/images/zach-headshot-compressed.jpg"}
+        ></Image>
         {/* <img className="w-full xl:w-1/3 rounded-xl" src="/images/zach-headshot-compressed.jpg" alt="Zach Gibbs" /> */}
         <div className="flex flex-col w-full xl:w-2/3 text-left gap-6 items-start">
           <p className="text-2xl lg:text-3xl font-bold">Websites that Streamline Your Business</p>

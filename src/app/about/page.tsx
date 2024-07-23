@@ -3,6 +3,7 @@ import AnimatedHeader from "../components/AnimatedHeader";
 import Explanatory from "../components/ExplanatorySection";
 import TestimonialSection from "../components/TestimonialSection";
 import AnimatedSection from "../components/AnimatedSection";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -50,9 +51,17 @@ export default function About() {
                 high-quality, efficient websites tailored to your business needs.
               </p>
             </div>
-            <figure className="w-full xl:w-1/2 2xl:w-1/3">
-              <img className="object-cover" src="/images/zach-headshot-compressed.jpg" alt="collage-rock-climbing-hiking-Central-Park" />
-            </figure>
+            {/* <figure className="w-full xl:w-1/2 2xl:w-1/3 rounded-xl"> */}
+            {/* <img className="object-cover" src="/images/zach-headshot-compressed.jpg" alt="collage-rock-climbing-hiking-Central-Park" /> */}
+            <Image
+              className="object-cover w-full xl:w-1/2 2xl:w-1/3 rounded-xl"
+              src="/images/zach-headshot-compressed.jpg"
+              alt="Zach Gibbs Headshot"
+              width={1000}
+              height={1000}
+              priority
+            />
+            {/* </figure> */}
           </AnimatedSection>
         </div>
         <TestimonialSection
