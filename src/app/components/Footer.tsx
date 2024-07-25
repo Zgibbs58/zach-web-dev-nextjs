@@ -114,7 +114,13 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p className="text-xs pt-3 text-center">Zach Gibbs &copy; {new Date().getFullYear()} All Rights Reserved.</p>
+      <p className="text-xs pt-3 text-center">&copy; Zach Gibbs Web Development 2023-{new Date().getFullYear()} All Rights Reserved.</p>
+      <p className="text-xs pt-3 text-center">
+        Click here to view our{" "}
+        <Link className="underline" href="/legal">
+          Terms and Conditions as well as our Privacy Policy.
+        </Link>
+      </p>
     </footer>
   );
 }
