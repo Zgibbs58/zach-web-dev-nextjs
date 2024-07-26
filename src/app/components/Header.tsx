@@ -43,7 +43,7 @@ export default function Header() {
         <Link className="group" href="/">
           Home
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${
+            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
               path === "/" ? "max-w-full w-full" : ""
             }`}
           ></span>
@@ -51,7 +51,7 @@ export default function Header() {
         <Link className="group" href="/about">
           About
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${
+            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
               path === "/about" ? "max-w-full w-full" : ""
             }`}
           ></span>
@@ -59,7 +59,7 @@ export default function Header() {
         <Link className="group" href="/portfolio">
           Portfolio
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${
+            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
               path === "/portfolio" ? "max-w-full w-full" : ""
             }`}
           ></span>
@@ -67,7 +67,7 @@ export default function Header() {
         <Link className="group" href="/contact">
           Contact
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500 ${
+            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
               path === "/contact" ? "max-w-full w-full" : ""
             }`}
           ></span>
@@ -91,7 +91,7 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 bg-bgLightSecondary dark:bg-bgDarkSecondary w-screen h-screen flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
+            className="fixed top-0 left-0 bg-bgLightPrimary dark:bg-bgDarkSecondary w-screen h-screen flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
           >
             <ul className="text-left flex flex-col text-xl w-full font-600 gap-4 items-start">
               <li onClick={toggleMenu}>

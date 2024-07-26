@@ -34,7 +34,7 @@ export default function about() {
           <AnimatedHeader
             text="About"
             xVal={-50}
-            tailwindClasses="text-4xl lg:text-5xl font-bold text-left underline underline-offset-[12px] decoration-[7px] decoration-emerald-500 mb-24"
+            tailwindClasses="text-4xl lg:text-5xl text-left underline underline-offset-[12px] decoration-[2px] decoration-emerald-500 mb-24"
           />
           <AnimatedSection tailwindClasses="flex flex-col xl:flex-row gap-24 items-center mb-48 lg:mb-64 mt-24">
             <div className="flex flex-col gap-6 w-full xl:w-1/2 2xl:w-2/3">

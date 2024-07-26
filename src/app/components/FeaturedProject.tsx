@@ -28,7 +28,7 @@ export default function FeaturedProject({ name, description, image }: { name: st
         </div>
       </figure>
       <div className="flex flex-col justify-start xl:hidden text-center mt-8">
-        <Button variant="outline" link="/portfolio">
+        <Button variant="outline" link="portfolio">
           View Portfolio
         </Button>
       </div>

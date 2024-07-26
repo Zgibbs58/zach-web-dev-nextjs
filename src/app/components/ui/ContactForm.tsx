@@ -196,7 +196,7 @@ const ContactForm = () => {
             </div>
             <div className="col-span-2 lg:col-span-1" id="checkbox-group">
               <p className="pb-2">Check all that apply</p>
-              <div className="col-span-1 lg:grid lg:grid-cols-2 lg:gap-2" role="group" aria-labelledby="checkbox-group">
+              <div className="col-span-1 lg:grid lg:grid-cols-2" role="group" aria-labelledby="checkbox-group">
                 <label className="flex gap-2">
                   <Field type="checkbox" name="checked" value="New Website" />
                   New Website
@@ -210,8 +210,8 @@ const ContactForm = () => {
                   Web Maintenance
                 </label>
                 <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Website Photography Session" />
-                  Website Photography Session
+                  <Field type="checkbox" name="checked" value="Website Photography" />
+                  Website Photography
                 </label>
                 <label className="flex gap-2">
                   <Field type="checkbox" name="checked" value="Contact Form" />
