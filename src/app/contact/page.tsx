@@ -4,7 +4,7 @@ import ContactForm from "../components/ui/ContactForm";
 
 export default function contact() {
   return (
-    <div className="mx-8 lg:mx-32 mt-6 mb-24">
+    <div className="mx-8 lg:mx-32 mt-6 mb-24 lg:mb-48">
       <AnimatedHeader
         text="Contact"
         xVal={-50}
@@ -20,19 +20,18 @@ export default function contact() {
           <h3 className="text-3xl font-semibold">What&apos;s next?</h3>
           <ol className="">
             <li>
-              <span className="font-bold text-emerald-500">Free Quote</span>: We will contact you to gather all the necessary details about your
-              project and provide you with a free, no-obligation quote.
+              <span className="font-bold text-emerald-500">Free Quote</span>: Fill out a simple online form to receive a free quote for your project.
             </li>
             <li>
-              <span className="font-bold text-emerald-500">Approval</span>: Your approval of the quote will kick off the scheduling and preparation
-              for your project.
+              <span className="font-bold text-emerald-500">Consultation</span>: Once you approve the quote, we schedule a consultation to discuss your
+              vision, product/service, and website requirements.
             </li>
             <li>
-              <span className="font-bold text-emerald-500">Schedule</span>: We will work with you to schedule a convenient time for our team to begin
-              the work.
+              <span className="font-bold text-emerald-500">Development</span>: I develop your website, and you review the final product before it goes
+              live.
             </li>
             <li>
-              <span className="font-bold text-emerald-500">Completion</span>: Our experienced team will complete your project with excellence.
+              <span className="font-bold text-emerald-500">Ongoing Support</span>: Receive continuous support and maintenance for your site.
             </li>
           </ol>
         </div>

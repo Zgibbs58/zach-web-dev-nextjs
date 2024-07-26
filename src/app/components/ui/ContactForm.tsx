@@ -38,7 +38,7 @@ const ContactForm = () => {
     lastName: Yup.string().required("Required"),
     email: Yup.string().email("Invalid email address").required("Required"),
     phone: Yup.string().required("Required"),
-    website: Yup.string().required("Required"),
+    website: Yup.string(),
     message: Yup.string().required("Required"),
   });
 
@@ -194,9 +194,9 @@ const ContactForm = () => {
               />
               <ErrorMessage name="website" render={(msg) => <div className="text-red-500">{msg}</div>} />
             </div>
-            <div className="col-span-2 lg:col-span-1" id="checkbox-group">
+            <div className="col-span-2 xl:col-span-1" id="checkbox-group">
               <p className="pb-2">Check all that apply</p>
-              <div className="col-span-1 lg:grid lg:grid-cols-2" role="group" aria-labelledby="checkbox-group">
+              <div className="col-span-1 2xl:grid 2xl:grid-cols-2 gap-x-2" role="group" aria-labelledby="checkbox-group">
                 <label className="flex gap-2">
                   <Field type="checkbox" name="checked" value="New Website" />
                   New Website
@@ -206,16 +206,16 @@ const ContactForm = () => {
                   Redesign
                 </label>
                 <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Web Maintenance" />
-                  Web Maintenance
-                </label>
-                <label className="flex gap-2">
                   <Field type="checkbox" name="checked" value="Website Photography" />
-                  Website Photography
+                  Web Photography
                 </label>
                 <label className="flex gap-2">
                   <Field type="checkbox" name="checked" value="Contact Form" />
                   Contact Form
+                </label>
+                <label className="flex gap-2">
+                  <Field type="checkbox" name="checked" value="Web Maintenance" />
+                  Web Maintenance
                 </label>
               </div>
             </div>

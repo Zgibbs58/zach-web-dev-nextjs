@@ -13,23 +13,23 @@ export default function Footer() {
           <ul className="flex flex-row items-center justify-center space-x-4 text-sm sm:text-md">
             <li className={`group transition duration-300 ${path === "/" ? "display: hidden" : ""}`}>
               <Link href="/">
-                Home<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500`}></span>
+                Home<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500`}></span>
               </Link>
             </li>
             <li className={`group transition duration-300 ${path === "/about" ? "display: hidden" : ""}`}>
               <Link href="/about">
                 About
-                <span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500`}></span>
+                <span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500`}></span>
               </Link>
             </li>
             <li className={`group transition duration-300 ${path === "/portfolio" ? "display: hidden" : ""}`}>
               <Link href="/portfolio">
-                Portfolio<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500`}></span>
+                Portfolio<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500`}></span>
               </Link>
             </li>
             <li className={`group transition duration-300 ${path === "/contact" ? "display: hidden" : ""}`}>
               <Link href="/contact">
-                Contact<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-1 bg-emerald-500`}></span>
+                Contact<span className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500`}></span>
               </Link>
             </li>
           </ul>
