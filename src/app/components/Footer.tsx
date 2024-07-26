@@ -7,7 +7,7 @@ import FullLogo from "../assets/FullLogo";
 export default function Footer() {
   const path = usePathname();
   return (
-    <footer className="px-6 lg:px-24 py-4 bg-bgLightSecondary dark:bg-bgDarkSecondary">
+    <footer className="px-6 lg:px-24 py-4 border-t">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-y-2">
         <nav className="">
           <ul className="flex flex-row items-center justify-center space-x-4 text-sm sm:text-md">
@@ -114,8 +114,8 @@ export default function Footer() {
           </a>
         </div>
       </div>
-      <p className="text-xs pt-3 text-center">&copy; Zach Gibbs Web Development 2023-{new Date().getFullYear()} All Rights Reserved.</p>
-      <p className="text-xs pt-3 text-center">
+      <p className="text-xs pt-3 text-center">&copy; Zach Gibbs Web Development 2023-{new Date().getFullYear()}. All Rights Reserved.</p>
+      <p className="text-xs text-center">
         Click here to view our{" "}
         <Link className="underline" href="/legal">
           Terms and Conditions as well as our Privacy Policy.
