@@ -1,4 +1,5 @@
 import AnimatedHeader from "../components/AnimatedHeader";
+import AnimatedSection from "../components/AnimatedSection";
 import ContactInfo from "../components/ContactInfo";
 import ContactForm from "../components/ui/ContactForm";
 
@@ -14,7 +15,7 @@ export default function contact() {
         <div className="w-full xl:w-2/3">
           <ContactForm />
         </div>
-        <div className="flex flex-col gap-6 xl:w-1/3">
+        <AnimatedSection tailwindClasses="flex flex-col gap-6 xl:w-1/3">
           <h4 className="text-3xl font-semibold">Contact Information</h4>
           <ContactInfo />
           <h3 className="text-3xl font-semibold">What&apos;s next?</h3>
@@ -34,7 +35,7 @@ export default function contact() {
               <span className="font-bold text-emerald-500">Ongoing Support</span>: Receive continuous support and maintenance for your site.
             </li>
           </ol>
-        </div>
+        </AnimatedSection>
       </div>
     </div>
   );

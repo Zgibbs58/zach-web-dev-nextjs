@@ -7,7 +7,7 @@ import FullLogo from "../assets/FullLogo";
 export default function Footer() {
   const path = usePathname();
   return (
-    <footer className="px-6 lg:px-24 py-4 border-t">
+    <footer className="px-6 lg:px-24 py-4 border-t border-lightText dark:border-bgLightPrimary">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-y-2">
         <nav className="">
           <ul className="flex flex-row items-center justify-center space-x-4 text-sm sm:text-md">

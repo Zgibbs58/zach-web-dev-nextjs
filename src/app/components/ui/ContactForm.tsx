@@ -5,9 +5,7 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 // import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import ContactModal from "./Modal";
-import Image from "next/image";
-import FullLogo from "@/app/assets/FullLogo";
-import MobileLogo from "@/app/assets/MobileLogo";
+import AnimatedSection from "../AnimatedSection";
 
 const ContactForm = () => {
   //   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -131,110 +129,112 @@ const ContactForm = () => {
           </g>
         </svg>
       </ContactModal>
-      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
-        {(formik) => (
-          <Form className="grid grid-cols-2 gap-4 md:gap-6">
-            <div className="flex flex-col">
-              <label htmlFor="firstName">First Name</label>
-              <Field
-                className="border border-lightText p-2 w-full sm:w-auto dark:text-lightText"
-                type="text"
-                name="firstName"
-                id="firstName"
-                placeholder="John"
-                autoComplete="given-name"
-              />
-              <ErrorMessage name="firstName" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
-            <div className="flex flex-col">
-              <label htmlFor="lastName">Last Name</label>
-              <Field
-                className="border border-lightText p-2 w-full sm:w-auto dark:text-lightText"
-                type="text"
-                id="lastName"
-                name="lastName"
-                placeholder="Doe"
-                autoComplete="family-name"
-              />
-              <ErrorMessage name="lastName" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
-            <div className="flex flex-col col-span-2 sm:col-span-1">
-              <label htmlFor="email">Email</label>
-              <Field
-                className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
-                type="email"
-                id="email"
-                name="email"
-                autoComplete="email"
-                placeholder="user@gmail.com"
-              />
-              <ErrorMessage name="email" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
-            <div className="flex flex-col col-span-2 sm:col-span-1">
-              <label htmlFor="phone">Phone</label>
-              <Field
-                className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
-                type="text"
-                name="phone"
-                id="phone"
-                autoComplete="tel"
-                placeholder="xxx-xxx-xxxx"
-              />
-              <ErrorMessage name="phone" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
-            <div className="flex flex-col col-span-2 lg:col-span-1">
-              <label htmlFor="website">Website Address</label>
-              <Field
-                className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
-                type="text"
-                name="website"
-                id="website"
-                autoComplete="url"
-                placeholder="www.yourwebsite.com"
-              />
-              <ErrorMessage name="website" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
-            <div className="col-span-2 xl:col-span-1" id="checkbox-group">
-              <p className="pb-2">Check all that apply</p>
-              <div className="col-span-1 2xl:grid 2xl:grid-cols-2 gap-x-2" role="group" aria-labelledby="checkbox-group">
-                <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="New Website" />
-                  New Website
-                </label>
-                <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Redesign" />
-                  Redesign
-                </label>
-                <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Website Photography" />
-                  Web Photography
-                </label>
-                <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Contact Form" />
-                  Contact Form
-                </label>
-                <label className="flex gap-2">
-                  <Field type="checkbox" name="checked" value="Web Maintenance" />
-                  Web Maintenance
-                </label>
+      <AnimatedSection>
+        <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
+          {(formik) => (
+            <Form className="grid grid-cols-2 gap-4 md:gap-6">
+              <div className="flex flex-col">
+                <label htmlFor="firstName">First Name</label>
+                <Field
+                  className="border border-lightText p-2 w-full sm:w-auto dark:text-lightText"
+                  type="text"
+                  name="firstName"
+                  id="firstName"
+                  placeholder="John"
+                  autoComplete="given-name"
+                />
+                <ErrorMessage name="firstName" render={(msg) => <div className="text-red-500">{msg}</div>} />
               </div>
-            </div>
-            <div className="col-span-2">
-              <label htmlFor="message">Message</label>
-              <Field className="border border-lightText w-full p-2 dark:text-lightText" as="textarea" id="message" name="message" rows="4" />
-              <ErrorMessage name="message" render={(msg) => <div className="text-red-500">{msg}</div>} />
-            </div>
+              <div className="flex flex-col">
+                <label htmlFor="lastName">Last Name</label>
+                <Field
+                  className="border border-lightText p-2 w-full sm:w-auto dark:text-lightText"
+                  type="text"
+                  id="lastName"
+                  name="lastName"
+                  placeholder="Doe"
+                  autoComplete="family-name"
+                />
+                <ErrorMessage name="lastName" render={(msg) => <div className="text-red-500">{msg}</div>} />
+              </div>
+              <div className="flex flex-col col-span-2 sm:col-span-1">
+                <label htmlFor="email">Email</label>
+                <Field
+                  className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
+                  type="email"
+                  id="email"
+                  name="email"
+                  autoComplete="email"
+                  placeholder="user@gmail.com"
+                />
+                <ErrorMessage name="email" render={(msg) => <div className="text-red-500">{msg}</div>} />
+              </div>
+              <div className="flex flex-col col-span-2 sm:col-span-1">
+                <label htmlFor="phone">Phone</label>
+                <Field
+                  className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
+                  type="text"
+                  name="phone"
+                  id="phone"
+                  autoComplete="tel"
+                  placeholder="xxx-xxx-xxxx"
+                />
+                <ErrorMessage name="phone" render={(msg) => <div className="text-red-500">{msg}</div>} />
+              </div>
+              <div className="flex flex-col col-span-2 lg:col-span-1">
+                <label htmlFor="website">Website Address</label>
+                <Field
+                  className="border border-lightText w-full p-2 sm:w-auto dark:text-lightText"
+                  type="text"
+                  name="website"
+                  id="website"
+                  autoComplete="url"
+                  placeholder="www.yourwebsite.com"
+                />
+                <ErrorMessage name="website" render={(msg) => <div className="text-red-500">{msg}</div>} />
+              </div>
+              <div className="col-span-2 xl:col-span-1" id="checkbox-group">
+                <p className="pb-2">Check all that apply</p>
+                <div className="col-span-1 2xl:grid 2xl:grid-cols-2 gap-x-2" role="group" aria-labelledby="checkbox-group">
+                  <label className="flex gap-2">
+                    <Field type="checkbox" name="checked" value="New Website" />
+                    New Website
+                  </label>
+                  <label className="flex gap-2">
+                    <Field type="checkbox" name="checked" value="Redesign" />
+                    Redesign
+                  </label>
+                  <label className="flex gap-2">
+                    <Field type="checkbox" name="checked" value="Website Photography" />
+                    Web Photography
+                  </label>
+                  <label className="flex gap-2">
+                    <Field type="checkbox" name="checked" value="Contact Form" />
+                    Contact Form
+                  </label>
+                  <label className="flex gap-2">
+                    <Field type="checkbox" name="checked" value="Web Maintenance" />
+                    Web Maintenance
+                  </label>
+                </div>
+              </div>
+              <div className="col-span-2">
+                <label htmlFor="message">Message</label>
+                <Field className="border border-lightText w-full p-2 dark:text-lightText" as="textarea" id="message" name="message" rows="4" />
+                <ErrorMessage name="message" render={(msg) => <div className="text-red-500">{msg}</div>} />
+              </div>
 
-            <button
-              className="text-white bg-emerald-500 hover:bg-emerald-700 ease-in-out duration-300 rounded-lg p-2 col-span-2"
-              type="submit"
-              disabled={formik.isSubmitting}
-            >
-              Submit
-            </button>
-          </Form>
-        )}
-      </Formik>
+              <button
+                className="text-white bg-emerald-500 hover:bg-emerald-700 ease-in-out duration-300 rounded-lg p-2 col-span-2"
+                type="submit"
+                disabled={formik.isSubmitting}
+              >
+                Submit
+              </button>
+            </Form>
+          )}
+        </Formik>
+      </AnimatedSection>
     </>
   );
 };
