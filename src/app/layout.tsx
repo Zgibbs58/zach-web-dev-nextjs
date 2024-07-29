@@ -8,7 +8,8 @@ import Footer from "./components/Footer";
 const titilliumWeb = Titillium_Web({ subsets: ["latin"], preload: true, weight: ["200", "300", "400", "600", "700", "900"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://zacharywgibbs.com"),
+  // metadataBase: new URL("https://zacharywgibbs.com"),
+  metadataBase: new URL("https://zach-web-dev-nextjs.vercel.app/"),
   title: {
     template: "%s | Zach Gibbs Web Development",
     default: "Zach Gibbs Web Development",
