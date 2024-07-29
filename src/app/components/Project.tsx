@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import ExternalLinkButton from "./ui/ExternalLinkButton";
+import Image from "next/image";
 
 export default function Project({
   name,
@@ -58,15 +59,15 @@ export default function Project({
             <ExternalLinkButton variant="primary" link={projectLink}>
               View Site
             </ExternalLinkButton>
-            <Button variant="outline" link="portfolio">
-              Learn More
+            <Button variant="outline" link={`project/${id}`}>
+              Project Details
             </Button>
           </div>
         </div>
         <figure className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center">
           <div className="phone-frame">
             <div className="phone-frame-inner">
-              <img src={image} alt={name} />
+              <Image src={image} alt={name} width={600} height={600} unoptimized />
             </div>
             <div className="volume-button-top"></div>
             <div className="volume-button-middle"></div>
@@ -78,8 +79,8 @@ export default function Project({
           <ExternalLinkButton variant="mobileButton" link={projectLink}>
             View Site
           </ExternalLinkButton>
-          <Button variant="mobileOutline" link="portfolio">
-            Learn More
+          <Button variant="mobileOutline" link={`project/${id}`}>
+            Project Details
           </Button>
         </div>
       </motion.section>
@@ -92,15 +93,16 @@ export default function Project({
             <ExternalLinkButton variant="primary" link={projectLink}>
               View Site
             </ExternalLinkButton>
-            <Button variant="outline" link="portfolio">
-              Learn More
+            <Button variant="outline" link={`project/${id}`}>
+              Project Details
             </Button>
           </div>
         </div>
         <figure className="xl:grid-span-1 my-10 xl:my-0 rounded-3xl grid justify-items-center">
           <div className="phone-frame">
             <div className="phone-frame-inner">
-              <img src={image} alt={name} />
+              {/* <img src={image} alt={name} /> */}
+              <Image src={image} alt={name} width={600} height={600} unoptimized />
             </div>
             <div className="volume-button-top"></div>
             <div className="volume-button-middle"></div>
@@ -112,8 +114,8 @@ export default function Project({
           <ExternalLinkButton variant="mobileButton" link={projectLink}>
             View Site
           </ExternalLinkButton>
-          <Button variant="mobileOutline" link="portfolio">
-            Learn More
+          <Button variant="mobileOutline" link={`project/${id}`}>
+            Project Details
           </Button>
         </div>
       </section>
@@ -131,7 +133,7 @@ export default function Project({
         {/* <img className="rounded-3xl shadow-xl shadow-gray-700 border-4 border-gray-200 xl:w-56" src={image} alt={image} /> */}
         <div className="phone-frame">
           <div className="phone-frame-inner">
-            <img src={image} alt={name} />
+            <Image src={image} alt={name} width={600} height={600} unoptimized />
           </div>
           <div className="volume-button-top"></div>
           <div className="volume-button-middle"></div>
@@ -147,8 +149,8 @@ export default function Project({
           <ExternalLinkButton variant="primary" link={projectLink}>
             View Site
           </ExternalLinkButton>
-          <Button variant="outline" link="portfolio">
-            Learn More
+          <Button variant="outline" link={`project/${id}`}>
+            Project Details
           </Button>
         </div>
       </div>

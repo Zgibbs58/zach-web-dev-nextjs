@@ -11,6 +11,7 @@ export const projectData = [
       "By implementing the StoryBrand framework, the website clearly communicates the value Solid Rock Concrete provides to its customers, helping to convert visitors into leads and clients.",
     ],
     image: "/images/solidRock.gif",
+    collage: "/images/srcFrame.png",
     projectLink: "https://www.solidrockconcretetn.com/",
     repoLink: "private",
     technologies: [
@@ -22,7 +23,6 @@ export const projectData = [
       "CSS",
       "Figma",
       "Adobe Photoshop",
-      "Adobe Lightroom",
       "Vercel",
       "Nodemailer",
       "SendGrid",
@@ -42,8 +42,9 @@ export const projectData = [
       "This project has been an awesome learning experience, allowing me to harness new technologies and improve upon my initial work.",
     ],
     image: "/images/mofieldBrothersRedesign.gif",
+    collage: "/images/mofieldBrothersFrame.png",
     projectLink: "https://www.mofieldbrothers.com/",
-    repoLink: "private",
+    repoLink: "https://github.com/Zgibbs58/Mofield-Brothers-React",
     technologies: [
       "Next.js",
       "React",
@@ -71,6 +72,7 @@ export const projectData = [
       "Reflecting on the experience, I now recognize both the advantages and disadvantages of creating a website with WordPress and a website builder versus coding it from scratch. Websites coded from scratch tend to perform better, offer virtually unlimited customization options, and can be seamlessly integrated with various APIs. While using a website builder on WordPress enabled me to develop a website in approximately half the time it takes to design and code one from scratch, it significantly reduced the need for extensive coding and felt similar to a website design project. Although some coding was necessary for customization, having a grasp of CSS proved beneficial, as most of the styling was accomplished using CSS terms. Implementing features such as SMTP for sending form data via email, as well as integrating ReCAPTCHA and Google Places API calls, was straightforward on WordPress. Moving forward, I will consider this approach when working with future clients, although I still prefer coding websites myself.",
     ],
     image: "/images/kandsHvac.gif",
+    collage: "/images/kandsFrame.png",
     projectLink: "https://www.kandshvac.com/",
     repoLink: "private",
     technologies: [
@@ -99,6 +101,7 @@ export const projectData = [
       "The client wanted to use their current hosting provider, which had some limitations. It did not support react router dom and since their server is not secured, I could not set up an SSL certificate and route traffic to https. I ended up using hash routing to handle routing and we are talking about switching to another provider later to enable https traffic. This project gave me the opportunity to practice my design skills and create something my client was very pleased with.",
     ],
     image: "/images/Trinity.gif",
+    collage: "/images/trinityFrame.png",
     projectLink: "http://www.trinitysalesgroupinc.com/",
     repoLink: "private",
     technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],

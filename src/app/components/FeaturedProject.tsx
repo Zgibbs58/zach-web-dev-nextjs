@@ -10,7 +10,7 @@ export default function FeaturedProject({ name, description, image }: { name: st
         <h4 className="text-2xl xl:text-4xl font-bold my-8">{name}</h4>
         <p className="mb-8">{description}</p>
         <div className="hidden xl:block">
-          <Button variant="outline" link="/portfolio">
+          <Button variant="outline" link="portfolio">
             View Portfolio
           </Button>
         </div>
