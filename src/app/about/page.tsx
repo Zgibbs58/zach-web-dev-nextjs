@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import AnimatedHeader from "../components/AnimatedHeader";
 import Explanatory from "../components/ExplanatorySection";
 import TestimonialSection from "../components/TestimonialSection";

@@ -5,10 +5,12 @@
 :root {
   --foreground: 23, 23, 23;
   --background-primary: 245, 248, 250;
-  --background-secondary: 255, 255, 255;
+  --background-secondary: 225, 232, 237;
   --primary-green: 16 185 129;
   font-size: 1.1rem;
   line-height: 1.75rem;
+  max-width: 2500px;
+  margin: 0 auto;
 }
 p {
   line-height: 1.5rem;

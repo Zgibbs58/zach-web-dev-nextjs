@@ -41,7 +41,7 @@ export default function ContactInfo() {
         </svg>
         <p id="contact-email" className="text-lg"></p>
       </div>
-      <div className="flex flex-row items-center gap-2">
+      {/* <div className="flex flex-row items-center gap-2">
         <svg
           enableBackground="new 120 50 512 512"
           id="Layer_1"
@@ -65,7 +65,7 @@ export default function ContactInfo() {
           </g>
         </svg>
         <p id="contact-phone" className="text-lg"></p>
-      </div>
+      </div> */}
     </>
   );
 }

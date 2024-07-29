@@ -1,18 +1,30 @@
-"use client";
-import { useEffect } from "react";
 import Project from "../components/Project";
-import { motion } from "framer-motion";
 import { projectData } from "../lib/projectData";
-// import MetaSeoTags from "../components/MetaSeoTags";
+import AnimatedHeader from "../components/AnimatedHeader";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Portfolio",
+  description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
+  openGraph: {
+    title: "Zach Gibbs Web Development | Professional Websites",
+    description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
+    url: "https://www.zacharywgibbs.com/portfolio",
+    type: "website",
+    images: [
+      {
+        url: "https://www.zacharywgibbs.com/images/ogPortfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Zach Gibbs Web Development",
+      },
+    ],
+  },
+};
 
 const isOdd = (num: number) => num % 2;
 
 export default function Portfolio() {
-  useEffect(() => {
-    // Scroll to the top of the page when the component mounts
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <>
       {/* <MetaSeoTags
@@ -27,15 +39,11 @@ export default function Portfolio() {
       /> */}
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32 mt-6 mb-24">
-          <motion.h3
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true, amount: 0.5 }}
-            className="text-4xl lg:text-5xl text-left underline underline-offset-[12px] decoration-[2px] decoration-emerald-500 mb-24"
-          >
-            Portfolio
-          </motion.h3>
+          <AnimatedHeader
+            text="Portfolio"
+            xVal={-50}
+            tailwindClasses="text-4xl lg:text-5xl text-left underline underline-offset-[12px] decoration-[2px] decoration-emerald-500 mb-24"
+          />
           {/* <span className={"block w-full transition-all duration-500 h-1 bg-emerald-400"}></span> */}
           {projectData.map((project) => (
             <Project
