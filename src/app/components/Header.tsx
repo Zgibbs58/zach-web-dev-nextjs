@@ -107,7 +107,7 @@ export default function Header() {
                 <Link href="/contact">Contact</Link>
               </li>
             </ul>
-            <Button variant="primary" link="contact">
+            <Button onClick={toggleMenu} variant="primary" link="contact">
               Free Quote
             </Button>
           </motion.div>

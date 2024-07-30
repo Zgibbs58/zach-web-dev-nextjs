@@ -5,9 +5,10 @@ interface ButtonProps {
   children: React.ReactNode;
   variant: "primary" | "outline" | "mobilePrimary" | "mobileOutline";
   link: string;
+  onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ children, variant, link }) => {
+const Button: React.FC<ButtonProps> = ({ children, variant, link, onClick }) => {
   let className = "";
 
   switch (variant) {
@@ -33,7 +34,9 @@ const Button: React.FC<ButtonProps> = ({ children, variant, link }) => {
 
   return (
     <Link href={`/${link}`}>
-      <button className={className}>{children}</button>
+      <button onClick={onClick} className={className}>
+        {children}
+      </button>
     </Link>
   );
 };
