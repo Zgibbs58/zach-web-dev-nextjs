@@ -2,6 +2,31 @@ import AnimatedHeader from "../components/AnimatedHeader";
 import AnimatedSection from "../components/AnimatedSection";
 import ContactInfo from "../components/ContactInfo";
 import ContactForm from "../components/ui/ContactForm";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description:
+    "Get in touch with Zach Gibbs for your web development needs. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business.",
+  alternates: {
+    canonical: "/contact",
+  },
+  openGraph: {
+    title: "Contact | Zach Gibbs Web Development | Custom Websites",
+    description:
+      "Get in touch with Zach Gibbs for your web development needs. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business.",
+    url: "/contact",
+    type: "website",
+    images: [
+      {
+        url: "/images/ogContact.png",
+        width: 1200,
+        height: 630,
+        alt: "Zach Gibbs Web Development",
+      },
+    ],
+  },
+};
 
 export default function contact() {
   return (

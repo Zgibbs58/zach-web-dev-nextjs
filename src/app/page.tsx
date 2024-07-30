@@ -13,25 +13,7 @@ import LeadGenerator from "./components/LeadGenerator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home | Professional Websites",
-  // description:
-  //   "Professional web development services in Murfreesboro, Tennessee. Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business.",
-  // keywords: "web development, Tennessee, custom websites, business websites, SEO, Zach Gibbs",
-  // openGraph: {
-  //   title: "Zach Gibbs Web Development | Professional Websites",
-  //   description:
-  //     "Professional web development services in Murfreesboro, Tennessee. Get high-quality, efficient websites tailored to your business needs. Contact us today!",
-  //   url: "https://www.zacharywgibbs.com",
-  //   type: "website",
-  //   images: [
-  //     {
-  //       url: "/images/ogHomeImg.png",
-  //       width: 1200,
-  //       height: 630,
-  //       alt: "Zach Gibbs Web Development",
-  //     },
-  //   ],
-  // },
+  title: "Home",
 };
 
 export default function Home() {

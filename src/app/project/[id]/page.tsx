@@ -3,6 +3,43 @@ import Button from "../../components/ui/Button";
 import ExternalLinkButton from "../../components/ui/ExternalLinkButton";
 import Image from "next/image";
 import AnimatedHeader from "@/app/components/AnimatedHeader";
+import { Metadata, ResolvingMetadata } from "next";
+
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  // read route params
+  const id = params.id;
+
+  // fetch data
+  const project = projectData.find((p) => p.id === parseInt(id));
+
+  return {
+    title: `${project?.name} | Zach Gibbs Web Development`,
+    description: project?.description,
+    alternates: {
+      canonical: `/project/${id}`,
+    },
+    openGraph: {
+      title: `${project?.name} | Zach Gibbs Web Development`,
+      description: project?.description,
+      url: `/project/${id}`,
+      type: "website",
+      images: [
+        {
+          url: project?.collage ?? "/images/ogHome.png",
+          width: 600,
+          height: 600,
+          alt: project?.name,
+        },
+      ],
+    },
+  };
+}
 
 export default function IndividualProject({ params }: { params: { id: string } }) {
   //   // console.log(projectData);
@@ -17,14 +54,9 @@ export default function IndividualProject({ params }: { params: { id: string } }
   //   const projectIdNum = parseInt(id as string, 10);
   const project = projectData.find((p) => p.id === parseInt(params.id));
   //   // console.log(project);
+
   return project ? (
     <>
-      {/* <MetaSeoTags
-          title={`${project.name} | Custom Website by Zach Gibbs`}
-          description={`Explore the custom website development project for ${project.name} by Zach Gibbs. High-quality web design tailored to business needs.`}
-          keywords={[project.name, "custom website", "web development", "web design", "web developer", "Murfreesboro", "Tennessee"]}
-          canonicalUrl={`https://zacharywgibbs.com/portfolio/${project.id}`}
-        /> */}
       <div className="mx-8 mt-6 mb-24 lg:mx-32 text-left flex flex-col items-start gap-y-8">
         <AnimatedHeader
           text="Project Overview"

@@ -1,3 +1,19 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Legal",
+  description: "Terms and Conditions and Privacy Policy for Zach Gibbs Web Development.",
+  alternates: {
+    canonical: "/legal",
+  },
+  openGraph: {
+    title: "Legal | Zach Gibbs Web Development",
+    description: "Terms and Conditions and Privacy Policy for Zach Gibbs Web Development.",
+    url: "/legal",
+    type: "website",
+  },
+};
+
 export default function Page() {
   return (
     <div className="mx-8 lg:mx-32 my-10">

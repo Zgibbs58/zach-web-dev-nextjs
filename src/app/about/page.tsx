@@ -3,31 +3,31 @@ import Explanatory from "../components/ExplanatorySection";
 import TestimonialSection from "../components/TestimonialSection";
 import AnimatedSection from "../components/AnimatedSection";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About | Zach Gibbs Web Development | Custom Websites",
+    url: "/about",
+    type: "website",
+    images: [
+      {
+        url: "/images/ogAbout.png",
+        width: 1200,
+        height: 630,
+        alt: "Zach Gibbs Web Development",
+      },
+    ],
+  },
+};
 
 export default function about() {
   return (
     <>
-      {/* <MetaSeoTags
-        title="About | Zach Gibbs Web Development"
-        description="Learn more about Zach Gibbs, an experienced web developer based in Murfreesboro, Tennessee. I provide high-quality, efficient websites tailored to your business needs."
-        keywords={[
-          "business web developer",
-          "custom websites",
-          "custom web solutions",
-          "experienced web developer",
-          "web development",
-          "web design",
-          "web designer",
-          "Murfreesboro",
-          "Tennessee",
-          "Nashville",
-        ]}
-        canonicalUrl={"https://zacharywgibbs.com/about"}
-        ogTitle="About | Zach Gibbs Web Development"
-        ogDescription="Learn more about Zach Gibbs, an experienced web developer based in Murfreesboro, Tennessee. I provide high-quality, efficient websites tailored to your business needs."
-        ogImg={"https://zacharywgibbs.com/images/ogAboutImg.png"}
-        slug={"/about"}
-      /> */}
       <div className="overflow-x-hidden">
         <div className="mx-10 mt-6 mb-24 lg:mx-32">
           <AnimatedHeader

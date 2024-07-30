@@ -6,14 +6,17 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Portfolio",
   description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
+  alternates: {
+    canonical: "/portfolio",
+  },
   openGraph: {
-    title: "Zach Gibbs Web Development | Professional Websites",
+    title: "Portfolio | Zach Gibbs Web Development | Custom Websites",
     description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
-    url: "https://www.zacharywgibbs.com/portfolio",
+    url: "/portfolio",
     type: "website",
     images: [
       {
-        url: "https://www.zacharywgibbs.com/images/ogPortfolio.png",
+        url: "/images/ogPortfolio.png",
         width: 1200,
         height: 630,
         alt: "Zach Gibbs Web Development",
@@ -27,16 +30,6 @@ const isOdd = (num: number) => num % 2;
 export default function Portfolio() {
   return (
     <>
-      {/* <MetaSeoTags
-        title={"Web Development Portfolio | Zach Gibbs | Murfreesboro, TN"}
-        description={"Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee."}
-        keywords={["web development portfolio", "custom websites", "web design", "web developer", "Murfreesboro", "Tennessee"]}
-        canonicalUrl={"https://zacharywgibbs.com/portfolio"}
-        ogTitle={"Web Development Portfolio | Zach Gibbs | Murfreesboro, TN"}
-        ogDescription={"Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee"}
-        ogImg={"https://zacharywgibbs.com/images/ogPortfolioImg.png"}
-        slug={"/portfolio"}
-      /> */}
       <section className="overflow-x-hidden">
         <div className="mx-8 lg:mx-32 mt-6 mb-24">
           <AnimatedHeader

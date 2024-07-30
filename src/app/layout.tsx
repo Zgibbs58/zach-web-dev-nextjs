@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // metadataBase: new URL("https://zacharywgibbs.com"),
   metadataBase: new URL("https://zach-web-dev-nextjs.vercel.app/"),
   title: {
-    template: "%s | Zach Gibbs Web Development",
+    template: "%s | Zach Gibbs Web Development | Custom Websites",
     default: "Zach Gibbs Web Development",
   },
   description:
