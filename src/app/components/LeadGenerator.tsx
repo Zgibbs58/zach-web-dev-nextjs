@@ -6,6 +6,7 @@ import * as Yup from "yup";
 // import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import ContactModal from "./ui/Modal";
 import Image from "next/image";
+import AnimatedHeader from "./AnimatedHeader";
 
 export default function LeadGenerator() {
   //   const { executeRecaptcha } = useGoogleReCaptcha();
@@ -121,7 +122,7 @@ export default function LeadGenerator() {
       </ContactModal>
       <div className="mx-8 mt-6 mb-24 sm:mx-20 lg:mx-32 flex flex-wrap xl:flex-nowrap gap-x-24">
         <div className="xl:w-1/2 space-y-6">
-          <h3 className="text-4xl lg:text-5xl font-bold text-left">Unlock Your Website&apos;s Potential</h3>
+          <AnimatedHeader xVal={-50} tailwindClasses="text-4xl font-bold text-left" text="Unlock Your Website's Potential" />{" "}
           <p>
             Want to know the secrets to a thriving online presence? Enter your name and email below and get access to a free PDF: 5 Essentials for a
             Successful Business Website.
@@ -167,7 +168,7 @@ export default function LeadGenerator() {
           </Formik>
         </div>
         <Image
-          className="xl:w-1/2 object-contain"
+          className="xl:w-1/2 object-contain mt-6 xl:mt-0"
           src="/images/5-must-have-titlepage.jpg"
           alt="Free PDF download title page"
           width={500}

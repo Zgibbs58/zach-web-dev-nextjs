@@ -4,14 +4,16 @@ import Head from "next/head";
 import { Titillium_Web } from "next/font/google";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const titilliumWeb = Titillium_Web({ subsets: ["latin"], preload: true, weight: ["200", "300", "400", "600", "700", "900"] });
 
 export const metadata: Metadata = {
-  // metadataBase: new URL("https://zacharywgibbs.com"),
-  metadataBase: new URL("https://zach-web-dev-nextjs.vercel.app/"),
+  metadataBase: new URL("https://zacharywgibbs.com"),
+  // metadataBase: new URL("https://zach-web-dev-nextjs.vercel.app/"),
   title: {
-    template: "%s | Zach Gibbs Web Development | Custom Websites",
+    template: "%s | Zach Gibbs Web Development | Custom",
     default: "Zach Gibbs Web Development",
   },
   description:
@@ -67,6 +69,7 @@ export default function RootLayout({
         {children}
         <Footer />
       </body>
+      <GoogleAnalytics gaId={process.env.GA_TRACKING_ID || ""} />
     </html>
   );
 }

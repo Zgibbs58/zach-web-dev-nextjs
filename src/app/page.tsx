@@ -13,7 +13,7 @@ import LeadGenerator from "./components/LeadGenerator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Home | Zach Gibbs Web Development | Custom Websites",
 };
 
 export default function Home() {
