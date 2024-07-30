@@ -1,11 +1,9 @@
-// import { useState } from "react";
 import Button from "./ui/Button";
 import Problem from "./Problem";
 
 export default function ProblemSection() {
   return (
     <div className="flex flex-col items-center text-center gap-y-20 md:gap-y-32 gap-x-24 my-48 lg:my-64 px-8 lg:px-32">
-      {/* <div className="flex flex-col items-start text-left gap-8 w-full xl:w-1/2"> */}
       <h2 className="text-3xl xl:text-5xl font-bold">Don&apos;t Lose Customers to a Bad Website</h2>
       <div className="grid md:grid-cols-2 2xl:grid-cols-4 gap-16">
         <Problem
