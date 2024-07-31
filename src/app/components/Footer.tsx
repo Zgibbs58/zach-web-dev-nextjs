@@ -34,7 +34,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <Link href={"/"} className="flex items-center w-60 pb-2">
+        <Link href={"/"} className="flex items-center w-60 pb-2" aria-label="Link to Homepage">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
@@ -61,7 +61,7 @@ export default function Footer() {
         </Link>
         {/* <h3 className="text-2xl lg:text-4xl font-bold text-center mb-2">Let&#39;s Connect</h3> */}
         <div className="flex flex-row items-center justify-center space-x-4 pb-2">
-          <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer">
+          <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer" aria-label="LinkedIn">
             <svg
               enableBackground="new 0 0 512 512"
               id="Layer_1"
@@ -79,7 +79,7 @@ export default function Footer() {
               </g>
             </svg>
           </a>
-          <a href="https://g.page/r/CTYVlseM2rC8EAI" target="_blank" rel="noreferrer">
+          <a href="https://g.page/r/CTYVlseM2rC8EAI" target="_blank" rel="noreferrer" aria-label="Link to Google Business Page">
             <svg
               enable-background="new 0 0 512 512"
               id="Layer_1"
@@ -95,7 +95,7 @@ export default function Footer() {
               </g>
             </svg>
           </a>
-          <a href="https://github.com/Zgibbs58" target="_blank" rel="noreferrer">
+          <a href="https://github.com/Zgibbs58" target="_blank" rel="noreferrer" aria-label="Link to Zach Gibbs' Github">
             <svg
               enableBackground="new 0 0 512 512"
               id="Layer_1"
@@ -111,7 +111,7 @@ export default function Footer() {
               </g>
             </svg>
           </a>
-          <Link href="/contact">
+          <Link href="/contact" aria-label="Link to Contact Page">
             <svg
               enableBackground="new 0 0 512 512"
               id="Layer_1"

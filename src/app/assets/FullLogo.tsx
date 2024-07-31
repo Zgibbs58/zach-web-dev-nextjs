@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function FullLogo() {
   return (
-    <Link href={"/"} className="lg:flex hidden items-center space-x-4 w-52">
+    <Link href={"/"} className="lg:flex hidden items-center space-x-4 w-52" aria-label="Link to Homepage">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         version="1.1"

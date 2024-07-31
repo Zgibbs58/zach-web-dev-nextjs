@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function MobileLogo() {
   return (
-    <Link href={"/"} className="lg:hidden flex items-center w-12">
+    <Link href={"/"} className="lg:hidden flex items-center w-12" aria-label="Link to Homepage">
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="200 200 470.4415617775495 310.4415617775495" className={`w-14`}>
         <g transform="scale(7.320832263036219) translate(10, 10)" fill="#10b981">
           <g id="SvgjsG16845" transform="matrix(0.9004566310986011,0,0,0.9004566310986011,17.839008336686117,3.791687896050071)">
