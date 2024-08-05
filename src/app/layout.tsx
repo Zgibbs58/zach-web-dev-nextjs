@@ -21,10 +21,6 @@ export const metadata: Metadata = {
   keywords: ["web development", "Tennessee", "custom websites", "business websites", "SEO", "Zach Gibbs", "web design", "photography"],
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "/en-US",
-      "de-DE": "/de-DE",
-    },
   },
   openGraph: {
     title: "Zach Gibbs Web Development | Professional Websites",
@@ -40,6 +36,9 @@ export const metadata: Metadata = {
         alt: "Zach Gibbs Web Development",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
   },
 };
 

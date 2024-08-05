@@ -4,12 +4,19 @@ import ExternalLinkButton from "../../components/ui/ExternalLinkButton";
 import Image from "next/image";
 import AnimatedHeader from "@/app/components/AnimatedHeader";
 import { Metadata, ResolvingMetadata } from "next";
+import AnimatedSection from "@/app/components/AnimatedSection";
 
 type Props = {
   params: {
     id: string;
   };
 };
+
+//Generates the static paths for the project pages so the page can be statically generated at build time
+export async function generateStaticParams() {
+  const paths = projectData.map((project) => ({ params: { id: String(project.id) } }));
+  return paths;
+}
 
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   // read route params
@@ -25,10 +32,6 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
       canonical: `/project/${id}`,
     },
     openGraph: {
-      title: `${project?.name} | Zach Gibbs Web Development`,
-      description: project?.description,
-      url: `/project/${id}`,
-      type: "website",
       images: [
         {
           url: project?.collage ?? "/images/ogHome.png",
@@ -63,33 +66,35 @@ export default function IndividualProject({ params }: { params: { id: string } }
           xVal={-50}
           tailwindClasses="text-3xl lg:text-5xl font-bold text-left underline underline-offset-[10px] decoration-[2px] decoration-emerald-500 w-10/12"
         />
-        <p className="text-left text-2xl font-semi-bold underline underline-gray-500">Case Study</p>
-        <div className="flex flex-col gap-y-4">
-          {project.fullDescription.map((paragraph) => (
-            <p className="text-left" key={paragraph + 1}>
-              {paragraph}
-            </p>
-          ))}
-        </div>
-        <p className="text-left text-2xl font-semi-bold underline underline-gray-500">Technologies Used</p>
-        <div className="flex flex-wrap">
-          {project.technologies.map((tech) => (
-            <span className="bg-gray-300 rounded-lg px-3 py-1 text-md font-semibold text-gray-700 mr-2 mt-2" key={String([tech]) + 1}>
-              {tech}
-            </span>
-          ))}
-        </div>
-        {project.collage && <Image className="rounded-lg" src={project.collage ?? ""} alt={project.name} width={1000} height={1000} unoptimized />}
-        <div className="flex flex-row gap-4">
-          <ExternalLinkButton variant="primary" link={project.projectLink}>
-            View Site
-          </ExternalLinkButton>
-          {project.repoLink === "private" ? null : (
-            <ExternalLinkButton variant="outline" link={project.repoLink}>
-              View Repo
+        <AnimatedSection tailwindClasses="space-y-8">
+          <p className="text-left text-2xl font-semi-bold underline underline-gray-500">Case Study</p>
+          <div className="flex flex-col gap-y-4">
+            {project.fullDescription.map((paragraph) => (
+              <p className="text-left" key={paragraph + 1}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
+          <p className="text-left text-2xl font-semi-bold underline underline-gray-500">Technologies Used</p>
+          <div className="flex flex-wrap">
+            {project.technologies.map((tech) => (
+              <span className="bg-gray-300 rounded-lg px-3 py-1 text-md font-semibold text-gray-700 mr-2 mt-2" key={String([tech]) + 1}>
+                {tech}
+              </span>
+            ))}
+          </div>
+          {project.collage && <Image className="rounded-lg" src={project.collage ?? ""} alt={project.name} width={1000} height={1000} unoptimized />}
+          <div className="flex flex-row gap-4">
+            <ExternalLinkButton variant="primary" link={project.projectLink}>
+              View Site
             </ExternalLinkButton>
-          )}
-        </div>
+            {project.repoLink === "private" ? null : (
+              <ExternalLinkButton variant="outline" link={project.repoLink}>
+                View Repo
+              </ExternalLinkButton>
+            )}
+          </div>
+        </AnimatedSection>
       </div>
     </>
   ) : (

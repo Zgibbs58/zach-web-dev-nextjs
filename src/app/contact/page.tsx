@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/contact",
   },
+  robots: {
+    follow: true,
+  },
   openGraph: {
     title: "Contact | Zach Gibbs Web Development | Custom Websites",
     description:

@@ -81,7 +81,7 @@ export default function Footer() {
           </a>
           <a href="https://g.page/r/CTYVlseM2rC8EAI" target="_blank" rel="noreferrer" aria-label="Link to Google Business Page">
             <svg
-              enable-background="new 0 0 512 512"
+              enableBackground="new 0 0 512 512"
               id="Layer_1"
               version="1.1"
               viewBox="0 0 512 512"

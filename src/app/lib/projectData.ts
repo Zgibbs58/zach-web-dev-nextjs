@@ -1,3 +1,15 @@
+export type ProjectType = {
+  id: number;
+  name: string;
+  description: string;
+  fullDescription: string[];
+  image: string;
+  collage: string;
+  projectLink: string;
+  repoLink: string;
+  technologies: string[];
+};
+
 export const projectData = [
   {
     id: 1,
@@ -106,21 +118,21 @@ export const projectData = [
     repoLink: "private",
     technologies: ["React", "Tailwind", "Framer Motion", "Swiper", "Vite", "Figma"],
   },
-  {
-    id: 5,
-    name: "Portfolio",
-    description:
-      "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
-    fullDescription: [
-      "This Portfolio is a React app created using Vite. Most of the styling was done using Tailwind, with all of the universal page styling handled in a separate CSS file. To enhance the user experience (UX), I incorporated Framer Motion to animate the initial load of components, and some components animate as they are scrolled into view. Another engaging feature I wanted to add was the ability to contact me using a form. I implemented front-end validation to ensure the required fields were entered correctly, including proper email formatting checked using regex. The form's functionality required setting up a Node server and using the Nodemailer package to send collected information via email.",
-      "The most significant challenge was dealing with Gmail's OAuth, where the refresh token would expire every seven days, causing the form to throw an authentication error and stop working. To diagnose and resolve this issue quickly, I logged errors in the server by creating a log file and writing to it using the fs API. Eventually, I moved to using AWS SES for email delivery, which worked flawlessly with Nodemailer and without any downtime.",
-      "This site is hosted on an AWS EC2 instance using an Ubuntu server. Setting up a server using SSH was a new experience, but with documentation and patience, I found the process to be a great learning experience. I created documentation on all the server setup, updating the server, using the Vim editor, and SSL configuration on the server to make these processes more streamlined for future projects.",
-    ],
-    image: "/images/Portfolio.gif",
-    projectLink: "https://zacharywgibbs.com/",
-    repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
-    technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
-  },
+  // {
+  //   id: 5,
+  //   name: "Portfolio",
+  //   description:
+  //     "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
+  //   fullDescription: [
+  //     "This Portfolio is a React app created using Vite. Most of the styling was done using Tailwind, with all of the universal page styling handled in a separate CSS file. To enhance the user experience (UX), I incorporated Framer Motion to animate the initial load of components, and some components animate as they are scrolled into view. Another engaging feature I wanted to add was the ability to contact me using a form. I implemented front-end validation to ensure the required fields were entered correctly, including proper email formatting checked using regex. The form's functionality required setting up a Node server and using the Nodemailer package to send collected information via email.",
+  //     "The most significant challenge was dealing with Gmail's OAuth, where the refresh token would expire every seven days, causing the form to throw an authentication error and stop working. To diagnose and resolve this issue quickly, I logged errors in the server by creating a log file and writing to it using the fs API. Eventually, I moved to using AWS SES for email delivery, which worked flawlessly with Nodemailer and without any downtime.",
+  //     "This site is hosted on an AWS EC2 instance using an Ubuntu server. Setting up a server using SSH was a new experience, but with documentation and patience, I found the process to be a great learning experience. I created documentation on all the server setup, updating the server, using the Vim editor, and SSL configuration on the server to make these processes more streamlined for future projects.",
+  //   ],
+  //   image: "/images/Portfolio.gif",
+  //   projectLink: "https://zacharywgibbs.com/",
+  //   repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
+  //   technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
+  // },
   // {
   //   id: 5,
   //   name: "AstronoME",
