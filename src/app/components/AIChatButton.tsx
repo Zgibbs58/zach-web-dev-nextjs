@@ -8,10 +8,10 @@ export default function AIChatButton() {
   return (
     <>
       <button
-        className="bg-emerald-500 rounded-lg p-1 md:p-2 hover:bg-emerald-600 ease-in-out duration-200 fixed bottom-4 right-4 z-50"
+        className="fixed bottom-5 right-5 z-50 rounded-lg bg-emerald-500 p-2 duration-200 ease-in-out hover:bg-emerald-600"
         onClick={() => setChatBoxOpen(true)}
       >
-        <Bot size={30} />
+        <Bot color="#ffffff" size={40} />
       </button>
       <AIChatBox open={chatBoxOpen} onClose={() => setChatBoxOpen(false)} />
     </>
