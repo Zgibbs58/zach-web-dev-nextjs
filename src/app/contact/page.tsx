@@ -44,6 +44,24 @@ export default function contact() {
           <div className="w-full xl:w-2/3">
             <ContactForm />
           </div>
+          {/* Commented just for scraper */}
+          {/* <a href="https://linkedin.com/in/zacharywgibbs" target="_blank" rel="noreferrer" aria-label="LinkedIn">LinkedId</a>
+          <a
+            href="https://g.page/r/CTYVlseM2rC8EAI"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link to Google Business Page"
+          >
+            Google business page
+          </a>
+          <a
+            href="https://github.com/Zgibbs58"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Link to Zach Gibbs' Github"
+          >
+            github.com/Zgibbs58
+          </a> */}
           <AnimatedSection tailwindClasses="flex flex-col gap-6 xl:w-1/3">
             <h4 className="text-3xl font-semibold">Contact Information</h4>
             <ContactInfo />

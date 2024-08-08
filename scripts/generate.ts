@@ -20,12 +20,17 @@ async function generateEmbeddings() {
     "src/app/",
     {
       ".tsx": (path) => new TextLoader(path),
+      ".ts": (path) => new TextLoader(path),
     },
     true,
   );
 
   const docs = (await loader.load())
-    .filter((doc) => doc.metadata.source.endsWith("page.tsx"))
+    .filter(
+      (doc) =>
+        doc.metadata.source.endsWith("page.tsx") ||
+        doc.metadata.source.endsWith("projectData.ts"),
+    )
     .map((doc): DocumentInterface => {
       const url =
         doc.metadata.source
