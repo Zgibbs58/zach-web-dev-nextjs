@@ -72,6 +72,7 @@ export async function POST(req: Request) {
           "Answer the user's questions based on the below context. " +
           "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context within the same site. " +
           "Never link to a website outside of zacharywgibbs.com. Format your messages in markdown format.\n\n" +
+          "If you are asked about projects or work experience, link them to the portfolio page on zacharywgibbs.com." +
           "Context:\n{context}",
       ],
       new MessagesPlaceholder("chat_history"),
