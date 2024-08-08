@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 export default function about() {
   return (
     <>
-      <div className="overflow-x-hidden">
+      <main className="overflow-x-hidden">
         <div className="mx-10 mb-24 mt-6 lg:mx-32">
           <AnimatedHeader
             text="About"
@@ -98,7 +98,7 @@ export default function about() {
         <div className="my-48 lg:my-64">
           <Explanatory />
         </div>
-      </div>
+      </main>
     </>
   );
 }

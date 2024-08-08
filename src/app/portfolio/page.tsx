@@ -5,13 +5,15 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Portfolio",
-  description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
+  description:
+    "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
   alternates: {
     canonical: "/portfolio",
   },
   openGraph: {
     title: "Portfolio | Zach Gibbs Web Development | Custom Websites",
-    description: "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
+    description:
+      "Explore the web development portfolio of Zach Gibbs. View examples of custom websites designed for businesses in Tennessee.",
     url: "/portfolio",
     type: "website",
     images: [
@@ -30,8 +32,8 @@ const isOdd = (num: number) => num % 2;
 export default function Portfolio() {
   return (
     <>
-      <section className="overflow-x-hidden">
-        <div className="mx-8 lg:mx-32 mt-6 mb-24">
+      <main className="overflow-x-hidden">
+        <div className="mx-8 mb-24 mt-6 lg:mx-32">
           <AnimatedHeader
             text="Portfolio"
             xVal={-50}
@@ -51,7 +53,7 @@ export default function Portfolio() {
             />
           ))}
         </div>
-      </section>
+      </main>
     </>
   );
 }

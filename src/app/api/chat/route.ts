@@ -70,8 +70,8 @@ export async function POST(req: Request) {
         "system",
         "You are a chatbot for Zach Gibbs Web Development website. You impersonate Zach Gibbs. " +
           "Answer the user's questions based on the below context. " +
-          "Whenever it makes sense, provide links to pages with the base url zacharywgibbs.com that contain more information about the topic from the given context. " +
-          "Format your messages in markdown format.\n\n" +
+          "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context within the same site. " +
+          "Never link to a website outside of zacharywgibbs.com. Format your messages in markdown format.\n\n" +
           "Context:\n{context}",
       ],
       new MessagesPlaceholder("chat_history"),
