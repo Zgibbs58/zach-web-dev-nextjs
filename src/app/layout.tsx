@@ -6,8 +6,13 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import AIChatButton from "./components/AIChatButton";
 
-const titilliumWeb = Titillium_Web({ subsets: ["latin"], preload: true, weight: ["200", "300", "400", "600", "700", "900"] });
+const titilliumWeb = Titillium_Web({
+  subsets: ["latin"],
+  preload: true,
+  weight: ["200", "300", "400", "600", "700", "900"],
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://zacharywgibbs.com"),
@@ -18,7 +23,16 @@ export const metadata: Metadata = {
   },
   description:
     "Professional web development services in Murfreesboro, Tennessee. Most businesses lack the time to update or create websites. I build clear and optimized websites that make it easy for customers to hire you, saving you time and boosting your business.",
-  keywords: ["web development", "Tennessee", "custom websites", "business websites", "SEO", "Zach Gibbs", "web design", "photography"],
+  keywords: [
+    "web development",
+    "Tennessee",
+    "custom websites",
+    "business websites",
+    "SEO",
+    "Zach Gibbs",
+    "web design",
+    "photography",
+  ],
   alternates: {
     canonical: "/",
   },
@@ -67,6 +81,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <AIChatButton />
       </body>
       <GoogleAnalytics gaId={process.env.GA_TRACKING_ID || ""} />
     </html>

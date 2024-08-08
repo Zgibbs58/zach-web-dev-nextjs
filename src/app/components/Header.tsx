@@ -9,6 +9,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import MobileLogo from "../assets/MobileLogo";
 import FullLogo from "../assets/FullLogo";
+import AIChatButton from "./AIChatButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,9 @@ export default function Header() {
   return (
     <header
       className={`px-6 lg:px-24 py-3 lg:py-1 bg-bgLightPrimary dark:bg-bgDarkSecondary flex justify-between items-center sticky top-0 z-10 transition-all ease-in-out duration-300 ${
-        isScrolled ? "bg-bgLightPrimary/90 dark:bg-bgDarkSecondary/90 shadow-[0_6px_10px_-3px_rgba(0,0,0,0.15)]" : ""
+        isScrolled
+          ? "bg-bgLightPrimary/90 dark:bg-bgDarkSecondary/90 shadow-[0_6px_10px_-3px_rgba(0,0,0,0.15)]"
+          : ""
       }`}
     >
       <MobileLogo />
@@ -77,11 +80,13 @@ export default function Header() {
         <Button variant="primary" link="contact">
           Free Quote
         </Button>
+        {/* <AIChatButton /> */}
       </div>
       <nav className="lg:hidden flex gap-4">
         <Button variant="mobilePrimary" link="contact">
           Free Quote
         </Button>
+        {/* <AIChatButton /> */}
         <Toggle toggle={() => toggleMenu()} isOpen={isOpen} />
       </nav>
       <AnimatePresence>
