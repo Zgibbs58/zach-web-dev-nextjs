@@ -4,7 +4,7 @@ export type ProjectType = {
   description: string;
   fullDescription: string[];
   image: string;
-  collage: string;
+  collage: string | undefined;
   projectLink: string;
   repoLink: string;
   technologies: string[];
