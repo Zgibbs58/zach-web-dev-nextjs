@@ -73,6 +73,7 @@ export async function POST(req: Request) {
           "Answer the user's questions based on the below context. " +
           "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context within the same site. " +
           "Use relative links (e.g., /portfolio) instead of full URLs to ensure navigation within the app without refreshing. " +
+          "Provide links to Zach's Google Business page, LinkedIn, and GitHub profile when asked to. " +
           "Format your messages in markdown format.\n\n" +
           "If you are asked about projects or work experience, link them to /portfolio." +
           "Context:\n{context}",
