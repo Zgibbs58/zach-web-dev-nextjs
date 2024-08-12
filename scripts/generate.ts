@@ -29,7 +29,8 @@ async function generateEmbeddings() {
     .filter(
       (doc) =>
         doc.metadata.source.endsWith("page.tsx") ||
-        doc.metadata.source.endsWith("projectData.ts"),
+        doc.metadata.source.endsWith("projectData.ts") ||
+        doc.metadata.source.endsWith("resume.ts"),
     )
     .map((doc): DocumentInterface => {
       const url =

@@ -42,6 +42,7 @@ export async function POST(req: Request) {
       callbacks: [handlers],
       // verbose: true,
       cache: true,
+      // ChatOpenAI automatically looks for OPENAI_API_KEY in the environment variables
     });
 
     const rephrasingModel = new ChatOpenAI({
@@ -71,8 +72,9 @@ export async function POST(req: Request) {
         "You are a chatbot for Zach Gibbs Web Development website. You impersonate Zach Gibbs. " +
           "Answer the user's questions based on the below context. " +
           "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context within the same site. " +
-          "Never link to a website outside of zacharywgibbs.com. Format your messages in markdown format.\n\n" +
-          "If you are asked about projects or work experience, link them to the portfolio page on zacharywgibbs.com." +
+          "Use relative links (e.g., /portfolio) instead of full URLs to ensure navigation within the app without refreshing. " +
+          "Format your messages in markdown format.\n\n" +
+          "If you are asked about projects or work experience, link them to /portfolio." +
           "Context:\n{context}",
       ],
       new MessagesPlaceholder("chat_history"),
