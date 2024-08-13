@@ -150,7 +150,7 @@ export const projectData = [
   },
   {
     id: 6,
-    name: "Next.js Portfolio",
+    name: "ZG Web Development",
     description:
       "A full-stack Next.js web app showcasing my expertise in building fast, modern, and interactive websites. It features a chatbot using Langchain and OpenAI, dynamic routing, and a contact form powered by Nodemailer and AWS SES.",
     fullDescription: [
@@ -158,9 +158,9 @@ export const projectData = [
       "The app also includes a form that sends user submissions via email using Nodemailer and AWS SES, ensuring reliable communication. Dynamic routing is implemented to display different projects based on their ID in the URL params, with static generation to enhance performance. I included meta tags for each page and dynamically generated meta tags for each project using Next.js's metadata object.",
       "The project is built with TypeScript (TSX), JSX, HTML, Tailwind, and CSS, demonstrating my ability to utilize modern web technologies to create interactive and performant web applications.",
     ],
-    image: "/images/zacharywgibbs.gif",
+    image: "/images/portfolio.gif",
     projectLink: "https://zacharywgibbs.com/",
-    repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
+    repoLink: "https://github.com/Zgibbs58/zach-web-dev-nextjs",
     technologies: [
       "Next.js",
       "Langchain",
