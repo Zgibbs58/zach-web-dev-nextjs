@@ -74,8 +74,9 @@ export async function POST(req: Request) {
           "Whenever it makes sense, provide links to pages that contain more information about the topic from the given context within the same site. " +
           "Use relative links (e.g., /portfolio) instead of full URLs to ensure navigation within the app without refreshing. " +
           "Provide links to Zach's Google Business page, LinkedIn, and GitHub profile when asked to. " +
+          "Only provide links to portfolio, about, /, contact, legal, or one of the above mentioned profiles. " +
           "Format your messages in markdown format.\n\n" +
-          "If you are asked about projects or work experience, link them to /portfolio." +
+          "If you are asked about projects or work experience, link them to the portfolio page." +
           "Context:\n{context}",
       ],
       new MessagesPlaceholder("chat_history"),

@@ -113,7 +113,7 @@ export default function IndividualProject({
             <ExternalLinkButton variant="primary" link={project.projectLink}>
               View Site
             </ExternalLinkButton>
-            {project.repoLink === "private" ? null : (
+            {!project.repoLink ? null : (
               <ExternalLinkButton variant="outline" link={project.repoLink}>
                 View Repo
               </ExternalLinkButton>

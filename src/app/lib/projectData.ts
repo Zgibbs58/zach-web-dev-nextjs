@@ -4,9 +4,9 @@ export type ProjectType = {
   description: string;
   fullDescription: string[];
   image: string;
-  collage: string | undefined;
-  projectLink: string;
-  repoLink: string;
+  collage?: string;
+  projectLink?: string;
+  repoLink?: string;
   technologies: string[];
 };
 
@@ -86,7 +86,6 @@ export const projectData = [
     image: "/images/kandsHvac.gif",
     collage: "/images/kandsFrame.png",
     projectLink: "https://www.kandshvac.com/",
-    repoLink: "private",
     technologies: [
       "WordPress",
       "Elementor",
@@ -115,7 +114,6 @@ export const projectData = [
     image: "/images/Trinity.gif",
     collage: "/images/trinityFrame.png",
     projectLink: "http://www.trinitysalesgroupinc.com/",
-    repoLink: "private",
     technologies: [
       "React",
       "Tailwind",
@@ -125,48 +123,60 @@ export const projectData = [
       "Figma",
     ],
   },
+  {
+    id: 5,
+    name: "AI Note App",
+    description:
+      "The AI Note App is a Next.js web app that integrates the ChatGPT API to provide an intelligent note-taking experience. Users can input text, and the AI generates a summary of the content. The app also includes a search feature that retrieves relevant notes based on user queries.",
+    fullDescription: [
+      "This AI-powered note-taking app was built using a combination of Next.js, TypeScript, TailwindCSS, and the ChatGPT API to deliver an advanced, intelligent note-taking experience. A key challenge arose when Pinecone updated its API to a cloud environment, which required refactoring the existing codebase to align with the new requirements. I addressed this by updating the pinecone.ts file and synchronizing the project with the latest dependencies, ensuring seamless compatibility and robust performance.",
+      "The app highlights my ability to overcome technical challenges, particularly in adapting to evolving APIs and technologies. I demonstrated expertise in integrating AI features, such as intelligent document retrieval with vector embeddings, and implementing user-centric functionality, including a light/dark theme toggle and secure user authentication with Clerk. The result is a modern, fully mobile-responsive application that showcases my strengths as a web developer committed to delivering high-quality, adaptable solutions.",
+    ],
+    image: "/images/aiNotesApp.gif",
+    projectLink: "https://ai-next-js-note-app.vercel.app/",
+    repoLink: "https://github.com/Zgibbs58/AI-NextJS-Note-App",
+    technologies: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript",
+      "ChatGPT API",
+      "Vercel",
+      "Pinecone",
+      "Vector Embeddings",
+      "Clerk",
+      "Shadcn UI",
+    ],
+  },
+  {
+    id: 6,
+    name: "Next.js Portfolio",
+    description:
+      "A full-stack Next.js web app showcasing my expertise in building fast, modern, and interactive websites. It features a chatbot using Langchain and OpenAI, dynamic routing, and a contact form powered by Nodemailer and AWS SES.",
+    fullDescription: [
+      "This portfolio was originally a React+Vite app, which I updated to a full-stack Next.js web app. The app highlights my value to businesses by creating fast, modern, and captivating websites. It includes a chatbot that uses Langchain and OpenAI's LLM to answer users' questions as if it were me, based on data from my website. The data is stripped of HTML and enriched with local files before being uploaded to the AstraDB vector embeddings.",
+      "The app also includes a form that sends user submissions via email using Nodemailer and AWS SES, ensuring reliable communication. Dynamic routing is implemented to display different projects based on their ID in the URL params, with static generation to enhance performance. I included meta tags for each page and dynamically generated meta tags for each project using Next.js's metadata object.",
+      "The project is built with TypeScript (TSX), JSX, HTML, Tailwind, and CSS, demonstrating my ability to utilize modern web technologies to create interactive and performant web applications.",
+    ],
+    image: "/images/zacharywgibbs.gif",
+    projectLink: "https://zacharywgibbs.com/",
+    repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
+    technologies: [
+      "Next.js",
+      "Langchain",
+      "OpenAI",
+      "AstraDB",
+      "Nodemailer",
+      "AWS SES",
+      "Tailwind",
+      "TypseScript",
+      "JavaScript",
+      "CSS",
+      "HTML",
+    ],
+  },
   // {
-  //   id: 5,
-  //   name: "AI Note App",
-  //   description:
-  //     "The AI Note App is a Next.js web app that integrates the ChatGPT API to provide an intelligent note-taking experience. Users can input text, and the AI generates a summary of the content. The app also includes a search feature that retrieves relevant notes based on user queries.",
-  //   fullDescription: [
-  //     "This AI-powered note-taking app was built using a combination of Next.js, TypeScript, TailwindCSS, and the ChatGPT API to deliver an advanced, intelligent note-taking experience. A key challenge arose when Pinecone updated its API to a cloud environment, which required refactoring the existing codebase to align with the new requirements. I addressed this by updating the pinecone.ts file and synchronizing the project with the latest dependencies, ensuring seamless compatibility and robust performance.",
-  //     "The app highlights my ability to overcome technical challenges, particularly in adapting to evolving APIs and technologies. I demonstrated expertise in integrating AI features, such as intelligent document retrieval with vector embeddings, and implementing user-centric functionality, including a light/dark theme toggle and secure user authentication with Clerk. The result is a modern, fully mobile-responsive application that showcases my strengths as a web developer committed to delivering high-quality, adaptable solutions.",
-  //   ],
-  //   image: "/images/aiNotesApp.gif",
-  //   projectLink: "https://ai-next-js-note-app.vercel.app/",
-  //   repoLink: "https://github.com/Zgibbs58/AI-NextJS-Note-App",
-  //   technologies: [
-  //     "Next.js",
-  //     "React",
-  //     "Tailwind CSS",
-  //     "TypeScript",
-  //     "ChatGPT API",
-  //     "Vercel",
-  //     "Pinecone",
-  //     "Vector Embeddings",
-  //     "Clerk",
-  //     "Shadcn UI",
-  //   ],
-  // },
-  // {
-  //   id: 5,
-  //   name: "Portfolio",
-  //   description:
-  //     "My portfolio is a React app developed with Vite, showcasing a dynamic user experience through Tailwind CSS and Framer Motion for engaging animations. The inclusion of a contact form required setting up a Node server and utilizing Nodemailer for email functionality. Overcoming challenges with Gmail's OAuth, I transitioned to AWS SES for reliable email delivery. The portfolio is hosted on an AWS EC2 instance using an Ubuntu server.",
-  //   fullDescription: [
-  //     "This Portfolio is a React app created using Vite. Most of the styling was done using Tailwind, with all of the universal page styling handled in a separate CSS file. To enhance the user experience (UX), I incorporated Framer Motion to animate the initial load of components, and some components animate as they are scrolled into view. Another engaging feature I wanted to add was the ability to contact me using a form. I implemented front-end validation to ensure the required fields were entered correctly, including proper email formatting checked using regex. The form's functionality required setting up a Node server and using the Nodemailer package to send collected information via email.",
-  //     "The most significant challenge was dealing with Gmail's OAuth, where the refresh token would expire every seven days, causing the form to throw an authentication error and stop working. To diagnose and resolve this issue quickly, I logged errors in the server by creating a log file and writing to it using the fs API. Eventually, I moved to using AWS SES for email delivery, which worked flawlessly with Nodemailer and without any downtime.",
-  //     "This site is hosted on an AWS EC2 instance using an Ubuntu server. Setting up a server using SSH was a new experience, but with documentation and patience, I found the process to be a great learning experience. I created documentation on all the server setup, updating the server, using the Vim editor, and SSL configuration on the server to make these processes more streamlined for future projects.",
-  //   ],
-  //   image: "/images/Portfolio.gif",
-  //   projectLink: "https://zacharywgibbs.com/",
-  //   repoLink: "https://github.com/Zgibbs58/Zachary-Portfolio",
-  //   technologies: ["React", "Express", "Tailwind", "Framer Motion", "Nodemailer", "AWS EC2", "AWS SES", "React Router Dom", "Typed.js"],
-  // },
-  // {
-  //   id: 5,
+  //   id: 6,
   //   name: "AstronoME",
   //   description:
   //     "AstronoME is a web app designed to provide users with a comprehensive dashboard of information to enhance their stargazing experiences. While many features require a valid account, the landing page offers a glimpse of Incoming Asteroid data, a Daily image from NASA, and a welcoming message prompting users to sign up or log in. Upon registering, users can access weather and moon phase data specific to their location and become part of the AstronoME community through a dedicated forum for stargazers.",
@@ -178,7 +188,18 @@ export const projectData = [
   //   ],
   //   image: "/images/AstronoME1.gif",
   //   repoLink: "https://github.com/Zgibbs58/astronoME",
-  //   technologies: ["React", "MongoDB", "Mongoose", "Express", "Node", "GraphQL", "Apollo Server", "Cloudinary", "Tailwind CSS", "Heroku"],
+  //   technologies: [
+  //     "React",
+  //     "MongoDB",
+  //     "Mongoose",
+  //     "Express",
+  //     "Node",
+  //     "GraphQL",
+  //     "Apollo Server",
+  //     "Cloudinary",
+  //     "Tailwind CSS",
+  //     "Heroku",
+  //   ],
   // },
   // {
   //   id: 6,
