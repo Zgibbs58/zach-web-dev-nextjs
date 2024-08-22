@@ -33,6 +33,12 @@ export default function Home() {
                 "Zach is extremely knowledgeable and very dedicated to his work. We gave him some freedom to express his design ideas, and he absolutely knocked it out of the park. Throughout this entire process, Zach has been very responsive, thorough, and explained everything very well. I highly recommend working with Zach; he is truly the best of the best in his field.",
             },
             {
+              name: "Colt Russel",
+              quote:
+                "I had an excellent experience working with Zach on my website. His photography work added a lot of value to the site, and the entire process was easy and required little effort on my part. Zach goes above and beyond, by providing more value than expected. I highly recommend Zach Gibbs Web Development.",
+              title: "Solid Rock Concrete",
+            },
+            {
               name: "Martin Mofield",
               title: "Mofield Brothers Construction",
               quote:
@@ -44,18 +50,17 @@ export default function Home() {
                 "Zach was excellent to work with. He was prompt to fix issues with my site and went above and beyond, giving me even more value than I asked for. I would definitely recommend his services.",
               title: "Comic Book Creator",
             },
-            // {
-            //   name: "Colt Russel",
-            //   quote:
-            //     "I had an excellent experience working with Zach on my website. His photography work added a lot of value to the site, and the entire process was easy and required little effort on my part. Zach goes above and beyond, providing more value than expected. I highly recommend Zach Gibbs Web Development.",
-            //   title: "Solid Rock Concrete",
-            // },
           ]}
         />
         <CtaSection />
         <StepsSection />
         <ExplanatorySection />
-        <FeaturedProject name={projectData[0].name} description={projectData[0].description} image={projectData[0].image} key={1} />
+        <FeaturedProject
+          name={projectData[0].name}
+          description={projectData[0].description}
+          image={projectData[0].image}
+          key={1}
+        />
         <LeadGenerator />
       </section>
     </main>

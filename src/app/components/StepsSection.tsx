@@ -3,12 +3,17 @@ import StepCard from "./StepCard";
 
 const StepsSection = () => {
   return (
-    <div className="relative flex flex-col justify-center items-center text-center gap-24 px-8 lg:px-32 mt-32 py-20 lg:max-h-screen overflow-hidden">
+    <div className="relative mt-32 flex flex-col items-center justify-center gap-24 overflow-hidden px-8 py-20 text-center lg:max-h-screen lg:px-32">
       {/* <div className="absolute inset-0 bg-cover bg-right-left" style={{ backgroundImage: "url('/images/stepsSection.jpg')" }}></div>
       <div className="absolute inset-0 bg-black opacity-20"></div> */}
-      <h2 className="relative text-3xl lg:text-5xl font-bold">How It Works</h2>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 text-[#6b7280]">
-        <StepCard delayVal={0} stepNum={1} title="Get a Free Quote" text="Fill out a simple online form to receive a free quote for your project." />
+      <h2 className="relative text-3xl font-bold lg:text-5xl">How It Works</h2>
+      <div className="relative grid grid-cols-1 gap-8 text-lightText md:grid-cols-2 xl:grid-cols-4">
+        <StepCard
+          delayVal={0}
+          stepNum={1}
+          title="Get a Free Quote"
+          text="Fill out a simple online form to receive a free quote for your project."
+        />
         <StepCard
           delayVal={0.05}
           stepNum={2}
@@ -21,7 +26,12 @@ const StepsSection = () => {
           title="Development and Review"
           text="I develop your website, and you review the final product before it goes live."
         />
-        <StepCard delayVal={0.15} stepNum={4} title="Ongoing Support" text="Receive continuous support and maintenance for your site." />
+        <StepCard
+          delayVal={0.15}
+          stepNum={4}
+          title="Ongoing Support"
+          text="Receive continuous support and maintenance for your site."
+        />
       </div>
       <div className="relative">
         <Button variant="primary" link="contact">
