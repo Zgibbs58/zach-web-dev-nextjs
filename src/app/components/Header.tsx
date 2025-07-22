@@ -9,7 +9,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import MobileLogo from "../assets/MobileLogo";
 import FullLogo from "../assets/FullLogo";
-import AIChatButton from "./AIChatButton";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,44 +33,44 @@ export default function Header() {
 
   return (
     <header
-      className={`px-6 lg:px-24 py-3 lg:py-1 bg-bgLightPrimary dark:bg-bgDarkSecondary flex justify-between items-center sticky top-0 z-10 transition-all ease-in-out duration-300 ${
+      className={`sticky top-0 z-10 flex items-center justify-between bg-bgLightPrimary px-6 py-3 transition-all duration-300 ease-in-out lg:px-24 lg:py-1 dark:bg-bgDarkSecondary ${
         isScrolled
-          ? "bg-bgLightPrimary/90 dark:bg-bgDarkSecondary/90 shadow-[0_6px_10px_-3px_rgba(0,0,0,0.15)]"
+          ? "bg-bgLightPrimary/90 shadow-[0_6px_10px_-3px_rgba(0,0,0,0.15)] dark:bg-bgDarkSecondary/90"
           : ""
       }`}
     >
       <MobileLogo />
       <FullLogo />
-      <nav className="space-x-4 hidden lg:flex">
+      <nav className="hidden space-x-4 lg:flex">
         <Link className="group" href="/">
           Home
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
-              path === "/" ? "max-w-full w-full" : ""
+            className={`block h-[2px] max-w-0 bg-emerald-500 transition-all duration-500 group-hover:max-w-full ${
+              path === "/" ? "w-full max-w-full" : ""
             }`}
           ></span>
         </Link>
         <Link className="group" href="/about">
           About
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
-              path === "/about" ? "max-w-full w-full" : ""
+            className={`block h-[2px] max-w-0 bg-emerald-500 transition-all duration-500 group-hover:max-w-full ${
+              path === "/about" ? "w-full max-w-full" : ""
             }`}
           ></span>
         </Link>
         <Link className="group" href="/portfolio">
           Portfolio
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
-              path === "/portfolio" ? "max-w-full w-full" : ""
+            className={`block h-[2px] max-w-0 bg-emerald-500 transition-all duration-500 group-hover:max-w-full ${
+              path === "/portfolio" ? "w-full max-w-full" : ""
             }`}
           ></span>
         </Link>
         <Link className="group" href="/contact">
           Contact
           <span
-            className={`block max-w-0 group-hover:max-w-full transition-all duration-500 h-[2px] bg-emerald-500 ${
-              path === "/contact" ? "max-w-full w-full" : ""
+            className={`block h-[2px] max-w-0 bg-emerald-500 transition-all duration-500 group-hover:max-w-full ${
+              path === "/contact" ? "w-full max-w-full" : ""
             }`}
           ></span>
         </Link>
@@ -82,7 +81,7 @@ export default function Header() {
         </Button>
         {/* <AIChatButton /> */}
       </div>
-      <nav className="lg:hidden flex gap-4">
+      <nav className="flex gap-4 lg:hidden">
         <Button variant="mobilePrimary" link="contact">
           Free Quote
         </Button>
@@ -96,9 +95,9 @@ export default function Header() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 300 }}
             transition={{ duration: 0.3 }}
-            className="fixed top-0 left-0 bg-bgLightPrimary dark:bg-bgDarkSecondary w-screen h-screen flex flex-col shadow-md lg:hidden pt-6 z-20 pl-4 gap-6 items-start"
+            className="fixed left-0 top-0 z-20 flex h-screen w-screen flex-col items-start gap-6 bg-bgLightPrimary pl-4 pt-6 shadow-md lg:hidden dark:bg-bgDarkSecondary"
           >
-            <ul className="text-left flex flex-col text-xl w-full font-600 gap-4 items-start">
+            <ul className="font-600 flex w-full flex-col items-start gap-4 text-left text-xl">
               <li onClick={toggleMenu}>
                 <Link href="/">Home</Link>
               </li>
