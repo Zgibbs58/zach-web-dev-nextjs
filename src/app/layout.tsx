@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Script from "next/script";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import AIChatButton from "./components/AIChatButton";
+// import AIChatButton from "./components/AIChatButton";
 
 const titilliumWeb = Titillium_Web({
   subsets: ["latin"],
