@@ -81,7 +81,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <AIChatButton />
+        {/* <AIChatButton /> */}
       </body>
       <GoogleAnalytics gaId={process.env.GA_TRACKING_ID || ""} />
     </html>
